@@ -1,13 +1,14 @@
 body {
     margin: 0;
     padding-left: 3.5rem;
+    overflow: hidden;
 }
 
 .background {
     padding-top: 0.5rem;
     background-color: white;
     display: block;
-    margin: 0.5rem;
+    margin: 1rem;
     border-radius: 0.5rem;
 }
 
@@ -67,6 +68,8 @@ table td a {
     width: 1.2rem;
     height: 1.2rem;
     padding: 0;
+    display: flex;
+    position: end;
 }
 
 .mais img {
@@ -75,7 +78,15 @@ table td a {
     height: 1rem;
 }
 
-.footer button {
-    width: 3rem;
-    height: auto;
+.botao {
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.botao button {
+    /* border: 1px solid black; */
+    border: none;
+    border-radius: 0.5rem;
+    width: 5rem;
+    height: 2.5rem;
 }
