@@ -80,34 +80,43 @@
             </div>
         </div>
     </nav>
-    <!--Area do calendário-->
-    <div id='calendar' style=" width: 300px; height: 300px;"></div>
+    <div style="margin-top: 2%;">
+        <div class="content">
 
-    <div class="grafico">
-        <canvas id="grafico" style="width: 300px; height: 300px;"></canvas>
-        <script>
-            const ctx = document.getElementById('grafico');
+            <!-- COLOQUE SEU CÓDIGO AQUI -->
 
-            new Chart(ctx, {
-                type: 'pie',
-                data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
+            <!--Area do calendário-->
+            <div id='calendar' style=" width: 300px; height: 300px;"></div>
+
+            <div class="grafico">
+                <canvas id="grafico" style="width: 300px; height: 300px;"></canvas>
+                <script>
+                    const ctx = document.getElementById('grafico');
+
+                    new Chart(ctx, {
+                        type: 'pie',
+                        data: {
+                            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                            datasets: [{
+                                label: '# of Votes',
+                                data: [12, 19, 3, 5, 2, 3],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
                         }
-                    }
-                }
-            });
-        </script>
+                    });
+                </script>
+            </div>
+        </div>
     </div>
+
+    <script src="processos.js"></script>
     <script src="index.js"></script>
 
 </body>
