@@ -10,80 +10,122 @@
     <link rel="icon" href="imagens/solar-panel.png" type="imag/x-icon">
     <link rel="shortcut icon" href="imagens/solar-panel.png" type="image/x-icon">
     <script src="https://cdn.plot.ly/plotly-2.26.0.min.js" charset="utf-8"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="wrapper">
-        <nav class="sidebar close">
-            <header>
-                <div class="image-text">
-                    <span class="image">
-                        <img src="imagens/Solar_Logo.png" alt="Logo_SolarG">
-                    </span>
-                </div>
-                <i class="bx bx-chevron-right toggle"></i>
-            </header>
-            <div class="menu-bar">
-                <div class="menu">
-                    <li class="search-box">
-                        <i class="bx bx-search icon"></i>
-                        <input type="search" placeholder="Pesquisar...">
-                    </li>
-                    <ul class="menu-links">
-                        <li class="nav-link">
-                            <a href="#">
-                                <i class="bx bx-home icon"></i>
-                                <span class="text nav-text">Inicio</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#">
-                                <i class="bx bx-phone icon"></i>
-                                <span class="text nav-text">Contato</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#">
-                                <i class="bx bx-book-content icon"></i>
-                                <span class="text nav-text">Agenda</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="pg2.html">
-                                <i class="bx bx-briefcase icon"></i>
-                                <span class="text nav-text">Fornecedores</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#"">
-                            <i class=" bx bx-bar-chart icon"></i>
-                                <span class="text nav-text">Financeiro</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="log-out">
-                    <li>
-                        <a href="#">
-                            <i class="bx bx-log-out icon"></i>
-                            <span class="text nav-text">Logout</span>
+        
+<body style="background-color: orange;">
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="imagens/Solar_Logo.png" alt="Logo_SolarG">
+                </span>
+            </div>
+            <i class="bx bx-chevron-right toggle"></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class="bx bx-search icon"></i>
+                    <input type="search" placeholder="Pesquisar...">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="Index.html">
+                            <i class="bx bx-home icon"></i>
+                            <span class="text nav-text">Inicio</span>
                         </a>
                     </li>
+                    <li class="nav-link">
+                        <a href="contatos/contatos.html">
+                            <i class="bx bx-phone icon"></i>
+                            <span class="text nav-text">Contato</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="agenda.html">
+                            <i class="bx bx-book-content icon"></i>
+                            <span class="text nav-text">Agenda</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="fornecedores.html">
+                            <i class="bx bx-briefcase icon"></i>
+                            <span class="text nav-text">Fornecedores</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="processos.html">
+                            <i class="bx bx-pie-chart icon"></i>
+                            <span class="text nav-text">Processos</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="financeiro.html">
+                            <i class=" bx bx-bar-chart icon"></i>
+                            <span class="text nav-text">Financeiro</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="log-out">
+                <li>
+                    <a href="login.html">
+                        <i class="bx bx-log-out icon"></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+    </div>
+
+    <div class="back" style="height: 97%;">
+        <div class="content">
+            <a data-bs-toggle="modal" data-bs-target="#newcard">
+                <div >
+                    <p class="card">NOVA FASE</p>
+                </div>    
+            </a>
+        </div>
+
+    </div>
+    </div>
+
+    <div style="padding-top: 5%;" class="modal fade" id="newcard" tabindex="-1" aria-labelledby="cadastroModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroModalLabel">Novo card</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <div class="add-card-form">
+                            <input type="text" id="card-content" placeholder="Título do Card" />
+
+                        </div>
+                        <div id="card-container">
+                            
+
+                        </div>
+                        <div class="modal-footer">
+                            <button data-bs-toggle="modal" data-bs-target="#Sucesso" type="button" class="btn btn-black"
+                                id="add-card">Adicionar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </div>
 
-    <div style="margin-top: 2%;">
-        <div class="content">
- 
-            <!-- COLOQUE SEU CÓDIGO AQUI -->
-
-        </div>
-    </div>
-
-    <script src="processos.js"></script>
+            <script src="processos.js"></script>
 
 
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -11,14 +11,17 @@
     <link rel="shortcut icon" href="imagens/solar-panel.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
-
-
+    <link rel="stylesheet" href="contatos/style.css">
+    
+    
 </head>
 
-<body>
+<body style="background-color: orange;">
+    
+    <div class="background">
     <nav class="sidebar close">
-        <header>
-            <div class="image-text">
+            <header>
+                <div class="image-text">
                 <span class="image">
                     <img src="imagens/Solar_Logo.png" alt="Logo_SolarG">
                 </span>
@@ -33,37 +36,37 @@
                 </li>
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="Index.html">
                             <i class="bx bx-home icon"></i>
                             <span class="text nav-text">Inicio</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="contatos/contatos.html">
                             <i class="bx bx-phone icon"></i>
                             <span class="text nav-text">Contato</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="agenda.html">
                             <i class="bx bx-book-content icon"></i>
                             <span class="text nav-text">Agenda</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="fornecedores.html">
                             <i class="bx bx-briefcase icon"></i>
                             <span class="text nav-text">Fornecedores</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="processos.html">
                             <i class="bx bx-pie-chart icon"></i>
                             <span class="text nav-text">Processos</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#"">
+                        <a href="financeiro.html">
                             <i class=" bx bx-bar-chart icon"></i>
                             <span class="text nav-text">Financeiro</span>
                         </a>
@@ -72,7 +75,7 @@
             </div>
             <div class="log-out">
                 <li>
-                    <a href="#">
+                    <a href="login.html">
                         <i class="bx bx-log-out icon"></i>
                         <span class="text nav-text">Logout</span>
                     </a>
@@ -82,7 +85,7 @@
     </nav>
     <div style="margin-top: 2%;">
         <div class="content">
-
+            
             <!-- COLOQUE SEU CÓDIGO AQUI -->
 
             <!--Area do calendário-->
@@ -111,11 +114,12 @@
                             }
                         }
                     });
-                </script>
+                    </script>
             </div>
         </div>
     </div>
-
+    
+</div>
     <script src="processos.js"></script>
     <script src="index.js"></script>
 

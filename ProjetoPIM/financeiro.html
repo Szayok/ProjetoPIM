@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financeiro</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="imagens/solar-panel.png" type="imag/x-icon">
+    <link rel="shortcut icon" href="imagens/solar-panel.png" type="image/x-icon">
+    <script src="https://cdn.plot.ly/plotly-2.26.0.min.js" charset="utf-8"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div style="margin-top: 2%;">
+        <div class="content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="accordion" id="accordionExample1">
+                        <h1 class="subtitulo" style="margin-bottom: 20px;">Despesas</h1>
+                        <br>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    Eletro
+                                </button>
+                            </h2>
+                            <div id="collapseOne">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Nome</label>
+                                        <input class="form-control" value="Clush" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">CNPJ</label>
+                                        <input class="form-control" value="41.306.779/0001-55" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Valor</label>
+                                        <input class="form-control" value="R$: 500,00" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Data de pagamento</label>
+                                        <input class="form-control" value="31 de fevereiro" readonly>
+                                        <button type="button" class="btn-pagar btn-primary">Pagar</button>
+                                        <button type="button" class="btn-pagar btn-primary">Editar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="accordion" id="accordionExample2">
+                        <h1 class="subtitulo" style="margin-bottom: 20px;">Receitas</h1>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                aria-expanded="true" aria-controls="collapseTwo">
+                                Maria
+                            </button>
+                        </h2>
+                        <div id="collapseTwo">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Nome</label>
+                                        <input class="form-control" value="Fornecedor 2" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Documento</label>
+                                        <input class="form-control" value="CPF/RG/CNPJ" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Valor</label>
+                                        <input class="form-control" value="R$000,00" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Data de recebimento</label>
+                                        <input class="form-control" value="12/12/2023" readonly>
+                                        <button type="button" class="btn-pagar btn-primary">Pagar</button>
+                                        <button type="button" class="btn-pagar btn-primary">Editar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--MODAL-->
+            <button type="button" class="btn-pagar btn-success btn-lg mt-2 ml-2" data-bs-toggle="modal" data-bs-target="#novo">Cadastrar</button>
+        <div class="modal fade" id="novo" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Cadastrar</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <!-- Corpo do modal -->
+                  <div class="modal-body">
+                    <div id="collapseOne">
+                        <div class="accordion-body">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Nome:</label>
+                                <input class="form-control" id="exampleFormControlInput1">
+                                <label for="exampleFormControlTextarea1" class="form-label">Documento:</label>
+                                <textarea class="form-control"></textarea>
+                                <label for="exampleFormControlTextarea1" class="form-label">Endereço:</label>
+                                <textarea class="form-control"></textarea>
+                                <label for="exampleFormControlTextarea1" class="form-label">Valor:</label>
+                                <textarea class="form-control" id="itens"></textarea>
+                                <label for="exampleFormControlTextarea1" class="form-label">Vencimento</label>
+                                <textarea class="form-control"></textarea>
+                                <button type="button" class="btn btn-primary">Anexo</button>
+                              </div>
+                        </div>
+                      </div>
+                  </div>
+                  <!-- Rodapé do modal-->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Salvar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+   
+<body style="background-color: orange;">
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="imagens/Solar_Logo.png" alt="Logo_SolarG">
+                </span>
+            </div>
+            <i class="bx bx-chevron-right toggle"></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class="bx bx-search icon"></i>
+                    <input type="search" placeholder="Pesquisar...">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="Index.html">
+                            <i class="bx bx-home icon"></i>
+                            <span class="text nav-text">Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="contatos/contatos.html">
+                            <i class="bx bx-phone icon"></i>
+                            <span class="text nav-text">Contato</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="agenda.html">
+                            <i class="bx bx-book-content icon"></i>
+                            <span class="text nav-text">Agenda</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="fornecedores.html">
+                            <i class="bx bx-briefcase icon"></i>
+                            <span class="text nav-text">Fornecedores</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="processos.html">
+                            <i class="bx bx-pie-chart icon"></i>
+                            <span class="text nav-text">Processos</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="financeiro.html">
+                            <i class=" bx bx-bar-chart icon"></i>
+                            <span class="text nav-text">Financeiro</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="log-out">
+                <li>
+                    <a href="login.html">
+                        <i class="bx bx-log-out icon"></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+    
+
+    <script src="index.js"></script>
+    
+
+    
+</body>
+</html>
