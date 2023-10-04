@@ -4,6 +4,16 @@ body {
     overflow: hidden;
 }
 
+.content {
+    margin-left: 85px;
+    transition: margin-left 0.3s ease-in-out;
+    display: flex;
+}
+
+.sidebar.open + .content {
+    margin-left: 220px;
+}
+
 .background {
     padding-top: 0.5rem;
     background-color: white;

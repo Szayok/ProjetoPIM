@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financeiro</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/sidebar.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="imagens/solar-panel.png" type="imag/x-icon">
     <link rel="shortcut icon" href="imagens/solar-panel.png" type="image/x-icon">
@@ -132,73 +133,74 @@
     
    
 <body style="background-color: orange;">
-    <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="imagens/Solar_Logo.png" alt="Logo_SolarG">
-                </span>
+     <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="/imagens/Solar_Logo.png" alt="Logo_SolarG">
+                    </span>
+                </div>
+                <i class="bx bx-chevron-right toggle"></i>
+            </header>
+            <div class="menu-bar">
+                <div class="menu">
+                    <li class="search-box">
+                        <i class="bx bx-search icon"></i>
+                        <input type="search" placeholder="Pesquisar...">
+                    </li>
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="Index.html">
+                                <i class="bx bx-home icon"></i>
+                                <span class="text nav-text">Inicio</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/Pages/contatos.html">
+                                <i class="bx bx-phone icon"></i>
+                                <span class="text nav-text">Contato</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/Pages/agenda.html">
+                                <i class="bx bx-book-content icon"></i>
+                                <span class="text nav-text">Agenda</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/Pages/fornecedores.html">
+                                <i class="bx bx-briefcase icon"></i>
+                                <span class="text nav-text">Fornecedores</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/Pages/processos.html">
+                                <i class="bx bx-pie-chart icon"></i>
+                                <span class="text nav-text">Processos</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/Pages/financeiro.html">
+                                <i class=" bx bx-bar-chart icon"></i>
+                                <span class="text nav-text">Financeiro</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="log-out">
+                    <li>
+                        <a href="/Pages/login.html">
+                            <i class="bx bx-log-out icon"></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+                </div>
             </div>
-            <i class="bx bx-chevron-right toggle"></i>
-        </header>
-        <div class="menu-bar">
-            <div class="menu">
-                <li class="search-box">
-                    <i class="bx bx-search icon"></i>
-                    <input type="search" placeholder="Pesquisar...">
-                </li>
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="Index.html">
-                            <i class="bx bx-home icon"></i>
-                            <span class="text nav-text">Inicio</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="contatos/contatos.html">
-                            <i class="bx bx-phone icon"></i>
-                            <span class="text nav-text">Contato</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="agenda.html">
-                            <i class="bx bx-book-content icon"></i>
-                            <span class="text nav-text">Agenda</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="fornecedores.html">
-                            <i class="bx bx-briefcase icon"></i>
-                            <span class="text nav-text">Fornecedores</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="processos.html">
-                            <i class="bx bx-pie-chart icon"></i>
-                            <span class="text nav-text">Processos</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="financeiro.html">
-                            <i class=" bx bx-bar-chart icon"></i>
-                            <span class="text nav-text">Financeiro</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="log-out">
-                <li>
-                    <a href="login.html">
-                        <i class="bx bx-log-out icon"></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
-                </li>
-            </div>
-        </div>
+        </nav>
     </nav>
     
 
-    <script src="index.js"></script>
+    <script src="/js/index.js"></script>
     
 
     
