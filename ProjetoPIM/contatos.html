@@ -85,7 +85,7 @@
         <header class="barra">
             <p><b>Pesquisar:</b>
                 <img src="/imagens/search.png" width="14rem" height="auto">
-                <input type="search">
+                <input type="search" class="pesquisa">
             </p>
         </header>
         <hr>
@@ -97,43 +97,53 @@
                 </tr>
                 <tr>
                     <Td><a href="#" id="joshua">Joshua</a></Td>
-                    <td>(45) 9 1234-5678 <button class="mais" align="right" style="border: none;"><img src="/imagens/plus-small.png"></button></td>
+                    <td>(45) 9 1234-5678</button></td>
                 </tr>
                 <tr>
                     <Td><a href="#">Gabi</a></Td>
-                    <td>(45) 9 1234-5678 <button class="mais" align="right" style="border: none;"><img src="/imagens/plus-small.png"></button></td>
+                    <td>(45) 9 1234-5678</button></td>
                 </tr>
                 <tr>
                     <Td><a href="#">Ana</a></Td>
-                    <td>(45) 9 1234-5678 <button class="mais" align="right" style="border: none;"><img src="/imagens/plus-small.png"></button></td>
+                    <td>(45) 9 1234-5678</button></td>
                 </tr>
                 <tr>
                     <Td><a href="#">Elioenel</a></Td>
-                    <td>(45) 9 1234-5678 <button class="mais" align="right" style="border: none;"><img src="/imagens/plus-small.png"></button></td>
+                    <td>(45) 9 1234-5678</button></td>
                 </tr>
                 <tr>
                     <Td><a href="#">Hector</a></Td>
-                    <td>(45) 9 1234-5678 <button class="mais" align="right" style="border: none;"><img src="/imagens/plus-small.png"></button></td>
+                    <td>(45) 9 1234-5678</button></td>
                 </tr>
                 <tr>
                     <Td><a href="#">Kaue</a></Td>
-                    <td>(45) 9 1234-5678 <button class="mais" align="right" style="border: none;"><img src="/imagens/plus-small.png"></button></td>
+                    <td>(45) 9 1234-5678</button></td>
                 </tr>
             </table>
         </div>
 
-        <!-- Modal -->
-        <div class="modal-joshua" id="myModal">
+        <!-- Content Modal -->
+        <div class="modal" id="myModal">
             <div class="modal-joshua-content">
-                <span id="close">&times;</span>
+                <span class="close">&times;</span>
                 <p>texto</p>
             </div>
         </div>
 
+        <!-- Add modal -->
+        <div class="add-modal" id="addModal">
+            <div class="add-modal-content">
+                <span class="close">&times;</span>
+                <input type="text" id="nome" placeholder="Nome">
+                <input type="text" id="email" placeholder="Email">
+                <input type="text" id="telefone" placeholder="Telefone">
+                <button id="confirmar">confirmar</button>
+            </div>
+        </div>
 
         <footer>
             <div class="botao" align="right">
-                <button style="background-color: orange;"><b>Editar</b></button>
+                <button style="background-color: orange;" id="adicionar"><b>Adicionar</b></button>
                 <button style="background-color: red;"><b>Excluir</b></button>
             </div>
         </footer>
