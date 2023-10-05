@@ -1,11 +1,22 @@
+html {
+    width: 100%;
+    height: auto;
+}
+
 body {
+    width: 100%;
+    height: auto;
     margin: 0;
     padding-left: 3.5rem;
     overflow: hidden;
 }
 
+.pesquisa {
+    border: 2px solid black;
+}
+
 .background {
-    padding-top: 0.5rem;
+    padding-top: 1rem;
     background-color: white;
     display: block;
     margin: 1rem;
@@ -76,12 +87,6 @@ table td a:hover {
     position: end;
 }
 
-.mais img {
-    margin-top: 0.1rem;
-    width: 1rem; 
-    height: 1rem;
-}
-
 .botao {
     padding-right: 0.5rem;
     padding-bottom: 0.5rem;
@@ -101,7 +106,7 @@ table td a:hover {
 
 /* modal */
 
-.modal-joshua {
+.modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -122,15 +127,36 @@ table td a:hover {
     width: 80%;
 }
 
-#close {
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-#close:hover, #close:focus {
+.close:hover, .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.add-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.add-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
 }
