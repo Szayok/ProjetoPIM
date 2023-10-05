@@ -17,6 +17,8 @@ const body = document.querySelector("body");
           content.style["margin-left"] = "230px"
         }
     });
+
+    
     // calendar
   const daysContainer = document.querySelector(".days"),
   nextBtn = document.querySelector(".next-btn"),

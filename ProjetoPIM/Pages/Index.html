@@ -12,7 +12,7 @@
     <link rel="icon" href="imagens/solar-panel.png" type="imag/x-icon">
     <link rel="shortcut icon" href="imagens/solar-panel.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link
@@ -97,6 +97,31 @@
 
                 <!--Area do calendário-->
                 <div class="container">
+                    <div class="grafico">
+                        <canvas id="myChart" style="display: flex;">
+                            <script>
+                                const ctx = document.getElementById('myChart');
+                                new Chart(ctx, {
+                                type: 'pie',
+                                data: {
+                                  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                                  datasets: [{
+                                    label: '# of Votes',
+                                    data: [12, 19, 3, 5, 2, 3],
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                  scales: {
+                                    y: {
+                                      beginAtZero: true
+                                    }
+                                  }
+                                }
+                              });
+                            </script>
+                        </canvas>
+                      </div>
                     <div class="calendar">
                       <div class="header">
                         <div class="month"></div>
@@ -129,6 +154,7 @@
               
                   </div>
                 
+                  
             </div>
         </div>
 
