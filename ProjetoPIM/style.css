@@ -53,6 +53,12 @@ hr {
     margin: 0;
 }
 
+hr {
+    border-color: orange;
+}
+
+/* table */
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -62,6 +68,8 @@ td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    background-color: white;
+    border-color: orange;
 }
   
 tr:nth-child(even) {
@@ -119,7 +127,7 @@ table td a:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.modal-joshua-content {
+.modal-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
