@@ -30,17 +30,29 @@ document.addEventListener("DOMContentLoaded", function () {
             addModal.style.display = "none";
         }
     });
+    
 });
 
-// session storage
+function armazenar (){
 
-const nome = document.getElementById("nome").value;
-const email = document.getElementById("email").value;
-const telefone = document.getElementById("telefone").value;
+    // session storage
+    
+    var nome = document.getElementById("nome").value;
+    var telefone = document.getElementById("telefone").value;
 
-sessionStorage.setItem("nome", nome);
-sessionStorage.setItem("email", email);
-sessionStorage.setItem("telefone", telefone);
-
-// content change
-
+    const table = document.getElementById("table");
+        sessionStorage.setItem("nome", nome);
+        sessionStorage.setItem("telefone", telefone);
+        
+        const tr = table.insertRow();
+        
+        var td = tr.insertCell();
+        td.appendChild(document.createTextNode(nome));
+        
+        td = tr.insertCell();
+        td.appendChild(document.createTextNode(telefone));
+    
+    // content change
+    
+}
+    
