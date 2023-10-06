@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("myModal");
   const addModal = document.getElementById("addModal");
   const adicionar = document.getElementById("adicionar");
-  const content = document.getElementById("modalContent");
 
   const span = Array.from(document.getElementsByClassName("close"));
 
@@ -12,7 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
     openModal.addEventListener("click", function (event) {
       modal.style.display = "block";
       
-      document.getElementById("mudarNome").innerHTML = oi;
+      let titulo = open[0].title;
+
+      var dado = sessionStorage.getItem(titulo);
+
+        alert(dado);
+        alert(titulo);
+
+      if (dado == titulo) {
+        document.getElementById("mudarNome").innerHTML = dado;
+      }
     });
   });
 
@@ -45,8 +53,8 @@ function armazenar() {
 
   const table = document.getElementById("table");
 
-  localStorage.setItem("nome", nome);
-  localStorage.setItem("telefone", telefone);
+  sessionStorage.setItem(nome, nome);
+  sessionStorage.setItem(telefone, telefone);
   const tr = table.insertRow();
 
   var td = tr.insertCell();
