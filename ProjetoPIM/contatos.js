@@ -62,3 +62,7 @@ function armazenar() {
 
   // content change
 }
+
+function excluir () {
+  sessionStorage.clear();
+}
