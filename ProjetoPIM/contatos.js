@@ -15,9 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       var dado = sessionStorage.getItem(titulo);
 
-        alert(dado);
-        alert(titulo);
-
       if (dado == titulo) {
         document.getElementById("mudarNome").innerHTML = dado;
       }
