@@ -36,6 +36,10 @@
     width: 55px;
 
 }
+
+.menu-links{
+    padding-left: 0;
+}
 .sidebar .text{
     font-weight: 500;
     color: var(--text-color);

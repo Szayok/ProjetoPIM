@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financeiro</title>
-    <link rel="stylesheet" href="/styles/index.css">
+   
     <link rel="stylesheet" href="/styles/sidebar.css">
+    <link rel="stylesheet" href="/styles/financeiro.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="imagens/solar-panel.png" type="imag/x-icon">
     <link rel="shortcut icon" href="imagens/solar-panel.png" type="image/x-icon">
@@ -18,10 +19,9 @@
     <div style="margin-top: 2%;">
         <div class="content">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6"> <!--Fundo do content (meio)-->
                     <div class="accordion" id="accordionExample1">
-                        <h1 class="subtitulo" style="margin-bottom: 20px;">Despesas</h1>
-                        <br>
+                        <h1 class="subtitulo" id="subtitulos">Despesas</h1>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
@@ -47,7 +47,7 @@
                                         <label class="form-label">Data de pagamento</label>
                                         <input class="form-control" value="31 de fevereiro" readonly>
                                         <button type="button" class="btn-pagar btn-primary">Pagar</button>
-                                        <button type="button" class="btn-pagar btn-primary">Editar</button>
+                                        <button type="button" class="btn-pagar btn-primary" id="editar">Editar</button>
                                     </div>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="accordion" id="accordionExample2">
-                        <h1 class="subtitulo" style="margin-bottom: 20px;">Receitas</h1>
+                        <h1 class="subtitulo" id="subtitulos">Receitas</h1>
                         
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -92,7 +92,9 @@
                 </div>
             </div>
             <!--MODAL-->
-            <button type="button" class="btn-pagar btn-success btn-lg mt-2 ml-2" data-bs-toggle="modal" data-bs-target="#novo">Cadastrar</button>
+            <div>
+                <button type="button" class="btn-cadastrar btn-success btn-lg mt-2 ml-2" data-bs-toggle="modal" data-bs-target="#novo">Cadastrar</button>
+            </div>
         <div class="modal fade" id="novo" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -107,11 +109,18 @@
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Nome:</label>
                                 <input class="form-control" id="exampleFormControlInput1">
-                                <label for="exampleFormControlTextarea1" class="form-label">Documento:</label>
-                                <textarea class="form-control"></textarea>
+                                <div class="mb-3">
+                                    <label for="documento" class="form-label">Documento:</label>
+                                
+                                    <input class="form-control" type="number">                
+                                    <!--<textarea class="form-control"></textarea>-->
+                                </div>
                                 <label for="exampleFormControlTextarea1" class="form-label">Endereço:</label>
                                 <textarea class="form-control"></textarea>
-                                <label for="exampleFormControlTextarea1" class="form-label">Valor:</label>
+                                <div class="mb-3">
+                                    <label for="valor" class="form-label">Valor R&#36;:</label>
+                                    <input class="form-control" type="number" id="valor" name="valor">
+                                </div>
                                 <textarea class="form-control" id="itens"></textarea>
                                 <label for="exampleFormControlTextarea1" class="form-label">Vencimento</label>
                                 <textarea class="form-control"></textarea>
@@ -123,6 +132,7 @@
                   <!-- Rodapé do modal-->
                   <div class="modal-footer">
                     <button type="button" class="btn btn-primary">Salvar</button>
+                    
                   </div>
                 </div>
               </div>
@@ -131,9 +141,8 @@
         </div>
     </div>
     
-   
-<body style="background-color: orange;">
-     <nav class="sidebar close">
+    <div class="background">
+        <nav class="sidebar close">
             <header>
                 <div class="image-text">
                     <span class="image">
@@ -150,7 +159,7 @@
                     </li>
                     <ul class="menu-links">
                         <li class="nav-link">
-                            <a href="Index.html">
+                            <a href="/Pages/Index.html">
                                 <i class="bx bx-home icon"></i>
                                 <span class="text nav-text">Inicio</span>
                             </a>
@@ -197,7 +206,6 @@
                 </div>
             </div>
         </nav>
-    </nav>
     
 
     <script src="/js/index.js"></script>
