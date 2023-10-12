@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+var pos = 0;
 
 function armazenar() {
-  var pos = 0;
   // session storage
   var nome = document.getElementById("nome").value;
   var telefone = document.getElementById("telefone").value;
@@ -31,9 +31,14 @@ function armazenar() {
 
   pos += 1;
 
-  sessionStorage.setItem(pos, pos);
-  sessionStorage.setItem(nome, nome);
-  sessionStorage.setItem(telefone, telefone);
+  var pessoa = {
+    'nome': nome, 'telefone': telefone
+  }
+
+  const stringPessoa = JSON.stringify(pessoa);
+
+  sessionStorage.setItem(pos, stringPessoa);
+
   const tr = table.insertRow();
   var td = tr.insertCell();
 
@@ -52,11 +57,19 @@ function armazenar() {
 }
 
 function criarModal() {
+
   var open = Array.from(document.getElementsByClassName("openModal"));
 
   open.forEach((openModal) => {
-    openModal.addEventListener("click", function (event) {
+    openModal.addEventListener("click", function () {
       modal.style.display = "block";
+
+      const stringPessoa = sessionStorage.getItem(openModal.id);
+
+      const pessoa = JSON.parse(stringPessoa);
+
+      document.getElementById("mudarNome").innerHTML = pessoa.nome;
+      document.getElementById("mudarTelefone").innerHTML = pessoa.telefone;
     });
   });
 
