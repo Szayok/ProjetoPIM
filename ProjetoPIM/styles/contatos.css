@@ -1,11 +1,11 @@
 html {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 body {
     width: 100%;
-    height: auto;
+    height: 100%;
     margin: 0;
     padding-left: 3.5rem;
     overflow: hidden;
@@ -16,6 +16,7 @@ body {
 }
 
 .background {
+    height: 95%;
     padding-top: 1rem;
     background-color: white;
     display: block;
@@ -96,8 +97,9 @@ table td a:hover {
 }
 
 .botao {
-    padding-right: 0.5rem;
+    padding-right: 1rem;
     padding-bottom: 0.5rem;
+    padding-top: 13%;
 }
 
 .botao button {
@@ -135,14 +137,14 @@ table td a:hover {
     width: 80%;
 }
 
-.close {
+.closeModal {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover, .close:focus {
+.closeModal:hover, .closeModal:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -167,4 +169,9 @@ table td a:hover {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+}
+
+.rodape {
+    height: 95%;
+    vertical-align: bottom;
 }

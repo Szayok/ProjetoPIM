@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const addModal = document.getElementById("addModal");
   const adicionar = document.getElementById("adicionar");
 
-  const span = Array.from(document.getElementsByClassName("close"));
+  const span = Array.from(document.getElementsByClassName("closeModal"));
 
   var open = Array.from(document.getElementsByClassName("openModal"));
 
@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  span.forEach((close) => {
-    close.addEventListener("click", function () {
+  span.forEach((closeModal) => {
+    closeModal.addEventListener("click", function () {
       addModal.style.display = "none";
       modal.style.display = "none";
     });

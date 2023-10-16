@@ -148,4 +148,18 @@ function hideTodayBtn() {
     todayBtn.style.display = "flex";
   }
 }
-   
+
+
+//Modal
+function open_modal(){
+  const modal = document.getElementById("myModal");
+  //const modal_content = document.getElementById("modal-content");
+  //const span = document.getElementById1("fechar")[0];
+  //var open =  document.getElementById("abrir");
+  modal.style.display = "block";
+
+  }
+function close_modal(){
+  const modal = document.getElementById("myModal");
+  modal.style.display = "none";
+}

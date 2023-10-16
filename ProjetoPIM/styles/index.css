@@ -25,6 +25,16 @@ body{
     background: var(--body-color);
 }
 
+.background {
+  height: 95%;
+  padding-top: 1rem;
+  background-color: white;
+  display: block;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  margin-left: 5%;
+}
+
 .grafico{
   justify-content: flex-start;
     border: 3px;
@@ -46,6 +56,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    position: relative;
     
   }
   .calendar {
@@ -133,4 +144,34 @@ body{
   .days .day.next,
   .days .day.prev {
     color: #ccc;
+  }
+
+  .modal {
+    width: 10rem;
+    height: auto;
+    color: black;
+    font-size: 20px;
+    display: none;
+  }
+  .abrir{
+    height: 45px;
+    width: 150px;
+    top: 0;
+    right: 0;
+    /* background-color: var(--primary-color-light); */
+    background-color: var(--primary-color);
+    border-style: none;
+    border-radius: 10px;
+   
+  }
+  .abrir:hover{
+
+    background-color: #e59444;
+    transition: var(--tran-03);
+   
+  }
+
+  .fechar{
+    border-style: solid;
+    cursor: pointer;
   }

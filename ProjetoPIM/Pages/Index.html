@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SolarG</title>
-    <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="/styles/contatos.css">
-    <link rel="stylesheet" href="/styles/sidebar.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/sidebar.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="imagens/solar-panel.png" type="imag/x-icon">
-    <link rel="shortcut icon" href="imagens/solar-panel.png" type="image/x-icon">
+    <link rel="icon" href="/imagens/solar-panel.png" type="imag/x-icon">
+    <link rel="shortcut icon" href="../imagens/solar-panel.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -26,6 +25,29 @@
 <body style="background-color: orange;">
 
     <div class="background">
+      <div class="content">
+        <button class="abrir" onclick="open_modal()">
+          Adicionar evento
+        </button>
+        <div class="modal" id="myModal">
+          <span class="fechar" onclick="close_modal()">&times;</span>
+          <div class="modal-content">
+            <form>
+              <label for="event"></label>
+                Evento:
+              </label>
+              <input type="text" id="event" name="event">
+              <label for="data">Data : </label>
+              <input type="date" name="date" id="date">
+              <label for="notes">
+                Anotações:
+              </label>
+              <input type="text" name="notes" id="notes">
+              <button type="submit">Salvar</button>
+            </form>
+          </div>
+          
+        </div>
         <nav class="sidebar close">
             <header>
                 <div class="image-text">
@@ -82,7 +104,7 @@
                 </div>
                 <div class="log-out">
                     <li>
-                        <a href="/Pages/login.html">
+                        <a href="../Pages/login.html">
                             <i class="bx bx-log-out icon"></i>
                             <span class="text nav-text">Logout</span>
                         </a>
@@ -91,7 +113,6 @@
             </div>
         </nav>
         <div style="margin-top: 2%;">
-            <div class="content">
 
                 <!-- COLOQUE SEU CÓDIGO AQUI -->
 
@@ -125,7 +146,7 @@
                     <div class="calendar">
                       <div class="header">
                         <div class="month"></div>
-                        <div class="btns">
+                        <div class="btns">                     
                           <div class="btn today-btn">
                             <i class="fas fa-calendar-day"></i>
                           </div>
@@ -159,8 +180,11 @@
         </div>
 
     </div>
-    
-    <script src="/js/index.js"></script>
+    <script>
+      
+    </script>
+ 
+    <script src="../js/index.js"></script>
 
 </body>
 
