@@ -49,8 +49,8 @@
 
 }
 .sidebar li{
-    height: 50px;
-    margin-top: 10px;
+    height: 100%;
+    margin-top: 100%;
     list-style: none;
     display: flex;
     align-items: center;
