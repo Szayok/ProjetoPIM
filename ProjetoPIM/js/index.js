@@ -1,23 +1,26 @@
 const body = document.querySelector("body");
-    sideBar = body.querySelector(".sidebar");
-    toggle = body.querySelector(".toggle");
-    searchBtn = body.querySelector(".search-box");
-    let content = body.querySelector('.content')
-    
-    toggle.addEventListener("click", ()=>{
-        sideBar.classList.toggle("close");
-        let arrClasses = [];
-        for(let i = 0; i < sideBar.classList.length; i++) {
-          arrClasses.push(sideBar.classList[i]);
-        }
-      
-        if (arrClasses.indexOf("close") > -1) {
-          content.style["margin-left"] = "85px"
-        } else {
-          content.style["margin-left"] = "230px"
-        }
-    });
+const searchBtn = body.querySelector(".search-box");
+let content = body.querySelector('.content')
+const sidebar = document.querySelector('.sidebar');
+const toggle = document.querySelector('.menu-links');
 
+toggle.addEventListener('mouseover', () => {
+  sidebar.classList.remove('close'); // Remove a classe close
+});
+
+sidebar.addEventListener('mouseleave', () => {
+  sidebar.classList.add('close'); // Adiciona a classe close quando o mouse deixa a sidebar
+});
+
+toggle.addEventListener("click", () => {
+  sidebar.classList.toggle("close");
+
+  if (sidebar.classList.contains("close")) {
+    content.style.marginLeft = "55px"; 
+  } else {
+    content.style.marginLeft = "220px"; 
+  }
+});
     
     // calendar
   const daysContainer = document.querySelector(".days"),
@@ -43,18 +46,18 @@ const months = [
 
 const days = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
 
-// get current date
+// Pega a data atual
 const date = new Date();
 
-// get current month
+// Pega o mês atual
 let currentMonth = date.getMonth();
 
-// get current year
+// Pega o ano atual
 let currentYear = date.getFullYear();
 
-// function to render days
+// função que renderiza os dias
 function renderCalendar() {
-  // get prev month current month and next month days
+  // pega o mês passado, o mês atual e o mês seguinte
   date.setDate(1);
   const firstDay = new Date(currentYear, currentMonth, 1);
   const lastDay = new Date(currentYear, currentMonth + 1, 0);
@@ -64,20 +67,20 @@ function renderCalendar() {
   const prevLastDayDate = prevLastDay.getDate();
   const nextDays = 7 - lastDayIndex - 1;
 
-  // update current year and month in header
+  // atualiza o ano e o mês no header
   month.innerHTML = `${months[currentMonth]} ${currentYear}`;
 
-  // update days html
+  // atualiza os dias no html
   let days = "";
 
-  // prev days html
+  // dias anteriores html
   for (let x = firstDay.getDay(); x > 0; x--) {
     days += `<div class="day prev">${prevLastDayDate - x + 1}</div>`;
   }
 
-  // current month days
+  // Dias do mês atual
   for (let i = 1; i <= lastDayDate; i++) {
-    // check if its today then add today class
+    // Checa se é hoje, e
     if (
       i === new Date().getDate() &&
       currentMonth === new Date().getMonth() &&
@@ -151,15 +154,24 @@ function hideTodayBtn() {
 
 
 //Modal
-function open_modal(){
-  const modal = document.getElementById("myModal");
-  //const modal_content = document.getElementById("modal-content");
-  //const span = document.getElementById1("fechar")[0];
-  //var open =  document.getElementById("abrir");
-  modal.style.display = "block";
+const openModalButton = document.querySelector("#abrir");
+const closeModalButton = document.querySelector("#fechar");
+const modal = document.querySelector("#modal");
+const fade = document.querySelector("#fade");
+const toggleModal = () =>{
+  [modal, fade].forEach((el)=> el.classList.toggle("hide"));
+};
+[openModalButton,closeModalButton, fade].forEach((el) =>{
+  el.addEventListener("click", () =>toggleModal());
+});
+function salvar(){
+  var evento = document.getElementById("event");
+  var data = document.getElementById("data");
+  var notas = document.getElementById("notes");
 
-  }
-function close_modal(){
-  const modal = document.getElementById("myModal");
-  modal.style.display = "none";
+  localStorage.setItem(evento, "event");
+  localStorage.setItem(data, "data");
+  localStorage.setItem(notas, "notes");
+
+  console.log(localStorage.getItem('evento'));
 }

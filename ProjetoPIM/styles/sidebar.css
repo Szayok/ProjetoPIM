@@ -18,6 +18,9 @@
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
     --tran-05: all 0.5s ease;
+    --tran-06: all 0.6s ease;
+    --tran-07: all 0.7s ease;
+    --tran-08: all 0.8s ease;
 }
 .sidebar{
     position: fixed;
@@ -28,8 +31,8 @@
     /* padding: 10px 14px; */
     padding: auto;
     background: var(--sidebar-color);
-    transition: var(--tran-04);
-    z-index: 100;
+    transition: var(--tran-06);
+    z-index: 5;
 }
 
 .sidebar.close{
@@ -79,7 +82,7 @@
     border-radius: 5px;
     
 }
-.sidebar header .toggle{
+/* .sidebar header .toggle{
     position: absolute;
     top:30%;
     right:-30px;
@@ -95,10 +98,10 @@
     font-size: 22px;
     transition: var(--tran-04);
 
-}
-.sidebar.close header .toggle{
+} */
+/* .sidebar.close header .toggle{
     transform: translateY(-50%);
-}
+} */
 .sidebar .search-box{
     background: var(--primary-color-light);
 }
@@ -154,6 +157,7 @@
     left: 88px;
     width: calc(100% - 80px);
 }
+
 .log-out{
-    margin-top: 20%;
+    margin-top: 15%;
 }
