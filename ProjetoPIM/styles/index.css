@@ -244,3 +244,18 @@ body{
 #modal.hide{
   top: 0;
 }
+#event{
+  border-radius: 10vh;
+  border-color: rgba(0, 0, 0, 0.3); 
+  
+}
+#data{
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.3); 
+}
+#notes{
+  resize: none;
+  border-color: rgba(0, 0, 0, 0.3); 
+  width: 200px;
+  height: 100px
+}

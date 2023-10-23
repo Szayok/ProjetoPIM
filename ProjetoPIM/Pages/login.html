@@ -6,6 +6,7 @@
     <title>SolarG</title>
     <link rel="stylesheet" href="../styles/login.css">
     <link rel="icon" href="/imagens/solar-panel.png" type="imag/x-icon">
+    <script src="../js/login.js"></script>
 
 </head>
 <body>
@@ -17,16 +18,16 @@
             <h2>Administrativo</h2>
             <form>
                 <div class="caixa__login-input">
-                    <input type="text" required />
-                    <label>Email</label>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required/>
                 </div>
                 <div class="caixa__login-input">
-                    <input type="password" required />
-                    <label>Senha</label>
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" required/>
                 </div>
                 <div>
                     <div><a class="lost" href="../Pages/sign_up.html">Registrar-se</a></div>
-                    <a href="../Pages/Index.html">
+                    <a  id="acessar"onclick="login()">
                         <span></span>
                         <span></span>
                         <span></span>

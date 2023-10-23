@@ -164,14 +164,29 @@ const toggleModal = () =>{
 [openModalButton,closeModalButton, fade].forEach((el) =>{
   el.addEventListener("click", () =>toggleModal());
 });
-function salvar(){
-  var evento = document.getElementById("event");
-  var data = document.getElementById("data");
-  var notas = document.getElementById("notes");
+function salvar() {
+  var evento = document.getElementById("event").value;
+  var data = document.getElementById("data").value;
+  var notas = document.getElementById("notes").value;
+  var event = document.getElementById("submit").value;
 
-  localStorage.setItem(evento, "event");
-  localStorage.setItem(data, "data");
-  localStorage.setItem(notas, "notes");
+
+  localStorage.setItem('evento', evento);
+  localStorage.setItem('data', data);
+  localStorage.setItem('notas', notas);
 
   console.log(localStorage.getItem('evento'));
+  console.log(localStorage.getItem ("data"));
+  console.log(localStorage.getItem ("notas"));
+
+  event.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const eventDate = document.getElementById("eventDate").value;
+    const eventDescription = document.getElementById("eventDescription").value;
+
+    
+  });
+
+  
 }

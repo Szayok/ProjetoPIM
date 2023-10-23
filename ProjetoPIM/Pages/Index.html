@@ -11,7 +11,6 @@
   <link rel="icon" href="/imagens/solar-panel.png" type="imag/x-icon">
   <link rel="shortcut icon" href="../imagens/solar-panel.png" type="image/x-icon">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
@@ -22,7 +21,6 @@
 
 <body style="background-color: orange;">
   <div class="background">
-
     <nav class="sidebar close">
       <header>
         <div class="image-text">
@@ -93,7 +91,7 @@
       <!--Area do calendário-->
       <div class="container">
         <div class="grafico">
-          <canvas id="myChart" style="display: flex;">
+          <canvas id="myChart" style="display: flex;" >
             <script>
               const ctx = document.getElementById('myChart');
               new Chart(ctx, {
@@ -141,7 +139,7 @@
             <div class="day">Sex</div>
             <div class="day">Sab</div>
           </div>
-          <div class="days">
+          <div class="days" onclick="toggleModal()">
             <!-- lets add days using js -->
           </div><br>
           <button id="abrir">
@@ -170,7 +168,7 @@
         </label>
         <input type="text" id="event" name="event"><br><br>
         <label for="data">Data : </label>
-        <input type="date" name="data" id="data"><br><br>
+        <input type="date" name="data" id="data" required><br><br>
         <label for="notes">
           Anotações:
         </label><br>
@@ -178,9 +176,8 @@
 
       </form>
       <div class="modal-footer">
-        <footer>
           <button id="save" type="submit" onclick="salvar()">Salvar</button>
-        </footer>
+        
       </div>
       <div class="modal-content" style="background-color: white;">
       </div>

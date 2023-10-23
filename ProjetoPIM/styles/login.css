@@ -17,13 +17,15 @@ body {
   font-family: Verdana;
   background: linear-gradient(to right top, #d87306, #e78f00, #f2ac00, #fbca00, #ffe800);
 }
-
+#acessar{
+  cursor: pointer;
+}
 .caixa__login {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
-  height: 590px;
+  width: 50vh;
+  height: 80vh;
   padding: 40px;
   transform: translate(-50%, -50%);
   /* background: rgba(0, 0, 0, 0.5); */
@@ -78,7 +80,9 @@ body {
   color: #fbca00;
   font-size: 12px;
 }
-
+#cadastrar{
+ cursor: pointer;
+}
 .caixa__login form a:not(.lost) {
   position: relative;
   display: inline-block;
@@ -112,7 +116,9 @@ body {
 }
 .lost:hover{
     color: #fbca00;
+    cursor: pointer;
 }
+
 .caixa__login a span {
   position: absolute;
   display: block;
