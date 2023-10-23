@@ -1,6 +1,6 @@
 const modal = document.getElementById("myModal");
 const addModal = document.getElementById("addModal");
-const adicionar = document.getElementById("adicionar");
+const adicionar = document.getElementById("canto");
 const excluir = document.getElementById("excluir")
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -83,30 +83,36 @@ function criarTabela(pessoas) {
 }
 
 function criarModal() {
-  var open = Array.from(document.getElementsByClassName("openModal"));
+  // var open = Array.from(document.getElementsByClassName("openModal"));
   const span = Array.from(document.getElementsByClassName("fechar"));
 
-  open.forEach((openModal) => {
-    openModal.addEventListener("click", function () {
-      modal.style.display = "block";
+  var open = document.getElementById("openModal");
 
-      const stringPessoa = sessionStorage.getItem(openModal.id);
-
-      const pessoa = JSON.parse(stringPessoa);
-
-      // document.getElementById("mudarNome").value
-      document.getElementById("mudarNome").innerHTML = pessoa.nome;
-      document.getElementById("mudarTelefone").innerHTML = pessoa.telefone;
-    });
-
-    excluir.addEventListener("click", function () {
-      document.getElementById("row " + openModal.id).remove();
-
-      modal.style.display = "none";
-
-      sessionStorage.clear();
-    });
+  opener.addEventListener("click", function(){
+    modal.style.display="block";
   });
+
+  // open.forEach((openModal) => {
+  //   openModal.addEventListener("click", function () {
+  //     modal.style.display = "block";
+
+  //     const stringPessoa = sessionStorage.getItem(openModal.id);
+
+  //     const pessoa = JSON.parse(stringPessoa);
+
+  //     // document.getElementById("mudarNome").value
+  //     document.getElementById("mudarNome").innerHTML = pessoa.nome;
+  //     document.getElementById("mudarTelefone").innerHTML = pessoa.telefone;
+  //   });
+
+  //   excluir.addEventListener("click", function () {
+  //     document.getElementById("row " + openModal.id).remove();
+
+  //     modal.style.display = "none";
+
+  //     sessionStorage.clear();
+  //   });
+  // });
 
   span.forEach((close) => {
     close.addEventListener("click", function () {
