@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <div class="inicio">
+        <div class="dashboard">
+            <img src="./imagens/Solar_Logo.png" width="80%" height="auto">
+            <i class="bx bxs-right-arrow-circle bx-lg" style="margin-left: 70%;color: #FBCA00;border-radius: 100%; background-color: white; border: 0px;"></i>        
+            <br><br><br><br>
+            <i class="bx bx-search bx-md" style="margin-left: 28%;"></i>
+            <br><br>
+            <i class="bx bx-home-alt-2 bx-md" style="margin-left: 28%;"></i>
+            <br><br>
+            <i class="bx bx-phone bx-md" style="margin-left: 28%;"></i>
+            <br><br>
+            <i class="bx bx-book-content bx-md" style="margin-left: 28%;"></i>
+            <br><br>
+            <i class="bx bx-briefcase bx-md" style="margin-left: 28%;"></i> 
+            <br><br>
+            <i class="bx bx-pie-chart-alt bx-md" style="margin-left: 28%;"></i>
+            <br><br>
+            <i class="bx bx-signal-5 bx-md" style="margin-left: 28%;"></i> 
+            <i class="bx bx-log-out  bx-md" style="margin-left: 23%; margin-top: 87%;"></i>
+            <i class="bx bx-help-circle bx-md" style="margin-left: 28%; margin-top: 15%;"></i>           
+
+
+        </div>
+        <div class="home"> 
+            <div>
+                <select class="select" id="fonte">
+                    <option value="ano"> Ano
+                    <option value="mes"> Mês
+                    <option value="semana"> Semana
+                </select>
+            </div>
+            <!-- <div>
+                <button class='bx bx-left-arrow-alt bx-md' id="seta-prox"></button>
+            </div> -->
+            <div class="slider">    
+                
+                <!-- Grades -->
+                <div class="slides">
+
+                    <!-- Indicadores de Pag -->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!------------------------>
+
+                    <div class="grade"> 
+                        <div>
+                            <button class="botao" id="1">1 </button>
+                            <button class="botao" id="2">2</button>
+                            <button class="botao" id="3">3</button>
+                            <button class="botao" id="4">4</button>
+                            <button class="botao" id="5">5</button>
+                            <button class="botao" id="6">6</button>
+                            <button class="botao" id="7">7</button>
+                            <button class="botao" id="8">8</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="botao" id="9">9</button>
+                            <button class="botao" id="10">10</button>
+                            <button class="botao" id="11">11</button>
+                            <button class="botao" id="12">12</button>
+                            <button class="botao" id="13">13</button>
+                            <button class="botao" id="14">14</button>
+                            <button class="botao" id="15">15</button>
+                            <button class="botao" id="16">16</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="botao" id="17">17</button>
+                            <button class="botao" id="18">18</button>
+                            <button class="botao" id="19">19</button>
+                            <button class="botao" id="20">20</button>
+                            <button class="botao" id="21">21</button>
+                            <button class="botao" id="22">22</button>
+                            <button class="botao" id="23">23</button>
+                            <button class="botao" id="24">24</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="botao" id="25">25</button>
+                            <button class="botao" id="26">26</button>
+                            <button class="botao" id="27">27</button>
+                            <button class="botao" id="28">28</button>
+                            <button class="botao" id="29">29</button>
+                            <button class="botao" id="30">30</button>   
+                        </div>
+                    </div>
+                    <div class="grade2"> 
+                        <div>
+                            <button class="botao" id="1">1 </button>
+                            <button class="botao" id="2">2</button>
+                            <button class="botao" id="3">3</button>
+                            <button class="botao" id="4">4</button>
+                            <button class="botao" id="5">5</button>
+                            <button class="botao" id="6">6</button>
+                            <button class="botao" id="7">7</button>
+                            <button class="botao" id="8">8</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="botao" id="9">9</button>
+                            <button class="botao" id="10">10</button>
+                            <button class="botao" id="11">11</button>
+                            <button class="botao" id="12">12</button>
+                            <button class="botao" id="13">13</button>
+                            <button class="botao" id="14">14</button>
+                            <button class="botao" id="15">15</button>
+                            <button class="botao" id="16">16</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="botao" id="17">17</button>
+                            <button class="botao" id="18">18</button>
+                            <button class="botao" id="19">19</button>
+                            <button class="botao" id="20">20</button>
+                            <button class="botao" id="21">21</button>
+                            <button class="botao" id="22">22</button>
+                            <button class="botao" id="23">23</button>
+                            <button class="botao" id="24">24</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="botao" id="25">25</button>
+                            <button class="botao" id="26">26</button>
+                            <button class="botao" id="27">27</button>
+                            <button class="botao" id="28">28</button>
+                            <button class="botao" id="29">29</button>
+                            <button class="botao" id="30">30</button>   
+                        </div>
+                    </div>
+                    <div class="grade3"> 
+                        <div>
+                            <button class="botao" id="1">1 </button>
+                            <button class="botao" id="2">2</button>
+                            <button class="botao" id="3">3</button>
+                            <button class="botao" id="4">4</button>
+                            <button class="botao" id="5">5</button>
+                            <button class="botao" id="6">6</button>
+                            <button class="botao" id="7">7</button>
+                            <button class="botao" id="8">8</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="botao" id="9">9</button>
+                            <button class="botao" id="10">10</button>
+                            <button class="botao" id="11">11</button>
+                            <button class="botao" id="12">12</button>
+                            <button class="botao" id="13">13</button>
+                            <button class="botao" id="14">14</button>
+                            <button class="botao" id="15">15</button>
+                            <button class="botao" id="16">16</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="botao" id="17">17</button>
+                            <button class="botao" id="18">18</button>
+                            <button class="botao" id="19">19</button>
+                            <button class="botao" id="20">20</button>
+                            <button class="botao" id="21">21</button>
+                            <button class="botao" id="22">22</button>
+                            <button class="botao" id="23">23</button>
+                            <button class="botao" id="24">24</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="botao" id="25">25</button>
+                            <button class="botao" id="26">26</button>
+                            <button class="botao" id="27">27</button>
+                            <button class="botao" id="28">28</button>
+                            <button class="botao" id="29">29</button>
+                            <button class="botao" id="30">30</button>   
+                        </div>
+                    </div>
+                    <div class="grade4"> 
+                        <div>
+                            <button class="botao" id="1">1 </button>
+                            <button class="botao" id="2">2</button>
+                            <button class="botao" id="3">3</button>
+                            <button class="botao" id="4">4</button>
+                            <button class="botao" id="5">5</button>
+                            <button class="botao" id="6">6</button>
+                            <button class="botao" id="7">7</button>
+                            <button class="botao" id="8">8</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="botao" id="9">9</button>
+                            <button class="botao" id="10">10</button>
+                            <button class="botao" id="11">11</button>
+                            <button class="botao" id="12">12</button>
+                            <button class="botao" id="13">13</button>
+                            <button class="botao" id="14">14</button>
+                            <button class="botao" id="15">15</button>
+                            <button class="botao" id="16">16</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="botao" id="17">17</button>
+                            <button class="botao" id="18">18</button>
+                            <button class="botao" id="19">19</button>
+                            <button class="botao" id="20">20</button>
+                            <button class="botao" id="21">21</button>
+                            <button class="botao" id="22">22</button>
+                            <button class="botao" id="23">23</button>
+                            <button class="botao" id="24">24</button>
+                        </div>
+                        <br>
+                        <div>
+                            <button class="botao" id="25">25</button>
+                            <button class="botao" id="26">26</button>
+                            <button class="botao" id="27">27</button>
+                            <button class="botao" id="28">28</button>
+                            <button class="botao" id="29">29</button>
+                            <button class="botao" id="30">30</button>  
+                        </div>
+                    </div>
+
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+        
+                </div>
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+                <!------------->
+            </div>
+
+
+            <div class="myModal" id="modal">
+                <div class="modal-content">
+                <span id="xis">&times;</span>
+                    <div>
+                        <h1 id="mudarDia" style="margin-right: 90%; margin-top: 2%; font-size: 90px;"></h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="Modal.js"></script>
+</body>
+</html>
