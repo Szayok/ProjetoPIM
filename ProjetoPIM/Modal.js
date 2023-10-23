@@ -1,5 +1,7 @@
 const modal = document.getElementById("modal");
 const fecha = document.getElementById("xis");
+const dias = document.getElementById("dia");
+
 
 document.addEventListener("DOMContentLoaded", function(){
     fecha.addEventListener("click", function(event){
@@ -11,17 +13,34 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
 
-    abrirModal;
+    abrirModal();
 });
 
 function abrirModal(){
     var button = Array.from(document.getElementsByClassName("botao"));
-    
+
     
     button.forEach((botao) => {
         botao.addEventListener("click", function(event){
             modal.style.display = "block";
+
+
+            var pos = botao.id;
+            
+            document.getElementById("mudarDia").innerHTML = pos;
         });
+        
     });
     
 }
+
+// function tabela(){
+//     const setaE = document.getElementsByClassName("seta-prox");
+//     var Meses = Array.from(document.getElementsByClassName("grade"));
+
+//     setaE.forEach((seta-prox) => {
+//         seta-prox.addEventListener("click", function(event){
+//             Meses.style.display = "block";
+//         });
+//     });
+// }

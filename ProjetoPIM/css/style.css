@@ -22,6 +22,11 @@ html, body {
     font-family: Akshar;
     font-size: 30px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover, #seta-prox:hover{
+    background-color: #fbeb5c;
 }
 
 .dashboard{
@@ -57,11 +62,11 @@ html, body {
 
 }
 
-.grade{
+.grade,.grade2,.grade3,.grade4{
     justify-content: space-between;
     padding-top: 11%;
     padding: 0%;
-    width: 100%;
+    width: auto;
     margin-top: 7%;
     margin-left: 19%;
 }
@@ -82,13 +87,14 @@ html, body {
     
 }
 .modal-content{
+    border-radius: 20px;
     position: absolute;
     right: 10%;
     top: 10%;
     background-color: white;
     height: 80%;
     width: 80%;
-    
+    font-family: Akshar;
 }
 
 #modal{
@@ -111,3 +117,84 @@ html, body {
     font-family:'Manrope', sans-serif;
     color: #1e1e1e;
 }
+
+#seta-prox{
+    width: 50px;
+    height: 50px;
+    background-color:#fff173;
+    border: #00000000;
+    border-radius: 100%;
+    position: absolute;
+    left: 20%;
+    bottom: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.select{
+    position: absolute;
+    right: 15%;
+    height: 35px; 
+    width: 185px; 
+    margin-bottom: 5%; 
+    margin-left: 1.5%;
+}
+
+#tab{
+    display: none;
+}
+
+.grade{
+    display: none;
+}
+
+.grade2{
+    margin-top: 10%;
+    display: none;
+}
+
+.grade3{
+    margin-top: 10%;
+    display: none;
+}
+
+.grade4{
+    margin-top: 10%;
+    display: none;
+}
+
+.slider{
+    width: 100%;
+    height: 100%;
+}
+
+.slides{
+    margin-top: 10%;
+}
+
+.slides input {
+    display: none;
+}
+
+.manual-navigation{
+    position: absolute;
+    margin-inline: 15%;
+    width: 8%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    right: 27%;
+}
+.manual-btn{
+    border: 0px solid rgba(255, 255, 255, 0);
+    width: 3%;
+    height: 8%;
+    background-color: #ffd52e;
+    padding: 5px;
+    border-radius: 10px;    
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+
