@@ -83,8 +83,12 @@ h1{
 td, th{
     vertical-align: middle;
 }
+td a {
+    color: var(--text);
+    text-decoration: none;
+}
 .bi-person-plus-fill{
-    color: #33322e;
+    color: var(--text);
     font-size: 22px;
 }
 .posicao{
