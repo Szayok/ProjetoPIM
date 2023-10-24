@@ -1,6 +1,6 @@
 const modal = document.getElementById("myModal");
 const addModal = document.getElementById("addModal");
-const adicionar = document.getElementById("canto");
+const adicionar = document.getElementById("adicionar");
 const excluir = document.getElementById("excluir")
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -65,17 +65,36 @@ function criarTabela(pessoas) {
 
   var td = tr.insertCell(0);
 
-  var link = document.createElement("a");
+  var texto = document.createTextNode(pos);
 
-  var texto = document.createTextNode(pessoas.nome);
+  td.appendChild(texto);
 
   // <a href="#" class="openModal" id="pos"><p>nome</p></a>
+  td = tr.insertCell(1);
+
+  var link = document.createElement("a");
+
+  texto = document.createTextNode(pessoas.nome);
+
   link.appendChild(texto);
   link.href = "#";
   link.className = "openModal";
   link.id = pos;
 
   td.appendChild(link);
+
+  // icone
+  td = tr.insertCell(2);
+
+  var button = document.createElement("button");
+  var icone = document.createElement("i");
+
+  icone.className = "bi bi-trash";
+  button.className = "btn btn-danger";
+  button.appendChild(icone);
+
+  td.appendChild(button);
+
   criarModal();
 
   addModal.style.display = "none";
@@ -83,36 +102,30 @@ function criarTabela(pessoas) {
 }
 
 function criarModal() {
-  // var open = Array.from(document.getElementsByClassName("openModal"));
+  var open = Array.from(document.getElementsByClassName("openModal"));
   const span = Array.from(document.getElementsByClassName("fechar"));
 
-  var open = document.getElementById("openModal");
+  open.forEach((openModal) => {
+    openModal.addEventListener("click", function () {
+      modal.style.display = "block";
 
-  opener.addEventListener("click", function(){
-    modal.style.display="block";
+      const stringPessoa = sessionStorage.getItem(openModal.id);
+
+      const pessoa = JSON.parse(stringPessoa);
+
+      // document.getElementById("mudarNome").value
+      document.getElementById("mudarNome").innerHTML = pessoa.nome;
+      document.getElementById("mudarTelefone").innerHTML = pessoa.telefone;
+    });
+
+    excluir.addEventListener("click", function () {
+      document.getElementById("row " + openModal.id).remove();
+
+      modal.style.display = "none";
+
+      sessionStorage.clear();
+    });
   });
-
-  // open.forEach((openModal) => {
-  //   openModal.addEventListener("click", function () {
-  //     modal.style.display = "block";
-
-  //     const stringPessoa = sessionStorage.getItem(openModal.id);
-
-  //     const pessoa = JSON.parse(stringPessoa);
-
-  //     // document.getElementById("mudarNome").value
-  //     document.getElementById("mudarNome").innerHTML = pessoa.nome;
-  //     document.getElementById("mudarTelefone").innerHTML = pessoa.telefone;
-  //   });
-
-  //   excluir.addEventListener("click", function () {
-  //     document.getElementById("row " + openModal.id).remove();
-
-  //     modal.style.display = "none";
-
-  //     sessionStorage.clear();
-  //   });
-  // });
 
   span.forEach((close) => {
     close.addEventListener("click", function () {
