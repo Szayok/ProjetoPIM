@@ -3,38 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/agenda.css">
+    <link rel="icon" href="/imagens/Solar-Logo.png" type="imag/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="/imagens/solar-panel.png" type="imag/x-icon">
+    <link rel="shortcut icon" href="/imagens/solar-panel.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
     <title>Document</title>
 </head>
 <body>
     <div class="inicio">
         <div class="dashboard">
-            <img src="./imagens/Solar_Logo.png" width="80%" height="auto">
-            <i class="bx bxs-right-arrow-circle bx-lg" style="margin-left: 70%;color: #FBCA00;border-radius: 100%; background-color: white; border: 0px;"></i>        
+            <img src="../imagens/Solar_Logo.png" width="80%" height="auto">
+            <i class="bx bxs-right-arrow-circle bx-lg" style="top: 11%; left: 4.5%; color: #FBCA00;border-radius: 100%; background-color: white; border: 0%; padding: 1px;"></i>        
             <br><br><br><br>
-            <i class="bx bx-search bx-md" style="margin-left: 28%;"></i>
-            <br><br>
-            <i class="bx bx-home-alt-2 bx-md" style="margin-left: 28%;"></i>
-            <br><br>
-            <i class="bx bx-phone bx-md" style="margin-left: 28%;"></i>
-            <br><br>
-            <i class="bx bx-book-content bx-md" style="margin-left: 28%;"></i>
-            <br><br>
-            <i class="bx bx-briefcase bx-md" style="margin-left: 28%;"></i> 
-            <br><br>
-            <i class="bx bx-pie-chart-alt bx-md" style="margin-left: 28%;"></i>
-            <br><br>
-            <i class="bx bx-signal-5 bx-md" style="margin-left: 28%;"></i> 
-            <i class="bx bx-log-out  bx-md" style="margin-left: 23%; margin-top: 87%;"></i>
-            <i class="bx bx-help-circle bx-md" style="margin-left: 28%; margin-top: 15%;"></i>           
+            <i class="bx bx-search bx-md" style="top: 17.8%;"></i>
+            <a href="/Pages/Index.html">
+                <i class="bx bx-home-alt-2 bx-md" style="top: 25.9%;"></i>
+            </a>
+            <a href="/Pages/contatos.html">
+                <i class="bx bx-phone bx-md" style="top: 34%;"></i>
+            </a>
+            <a href="/Pages/agenda.html">
+                <i class="bx bx-book-content bx-md" style="top: 42.1%;"></i>
+            </a>
+            <a href="/Pages/fornecedores.html">
+                <i class="bx bx-briefcase bx-md" style="top: 50.2%;"></i> 
+            </a>
+            <a href="/Pages/processos.html">
+                <i class="bx bx-pie-chart-alt bx-md" style="top: 58.3%;"></i>
+            </a>
+            <a href="/Pages/financeiro.html">
+                <i class="bx bx-signal-5 bx-md" style="top: 66.4%;"></i> 
+            </a>
+            <a href="/Pages/login.html"></a>
+                <i class="bx bx-log-out  bx-md" style="top: 91.2%;"></i>
+            </a>          
 
 
         </div>
         <div class="home"> 
             <div>
                 <select class="select" id="fonte">
-                    <option value="ano"> Ano
+                    <option value="Janeiro"> Janeiro
                     <option value="mes"> Mês
                     <option value="semana"> Semana
                 </select>
@@ -54,7 +66,7 @@
                     <input type="radio" name="radio-btn" id="radio4">
                     <!------------------------>
 
-                    <div class="grade"> 
+                    <div id="grade"> 
                         <div>
                             <button class="botao" id="1">1 </button>
                             <button class="botao" id="2">2</button>
@@ -236,10 +248,10 @@
         
                 </div>
                 <div class="manual-navigation">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio1" class="manualbtn"></label>
+                    <label for="radio2" class="manualbtn"></label>
+                    <label for="radio3" class="manualbtn"></label>
+                    <label for="radio4" class="manualbtn"></label>
                 </div>
                 <!------------->
             </div>
@@ -256,6 +268,6 @@
 
         </div>
     </div>
-    <script src="Modal.js"></script>
+    <script src="../Modal.js"></script>
 </body>
 </html>

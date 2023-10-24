@@ -41,7 +41,23 @@ html, body {
 }
 
 .dashboard i{
+    position: absolute;
+    left: 0%;
+    padding: 1.65%;
+    padding-top: 1%;
+    padding-bottom: 1%; 
     align-items: center;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.dashboard i:hover{
+background-color: #fbeb5c;
+}
+
+.dashboard a {
+    text-decoration: none;
+    color: #000;
 }
 
 .inicio{
@@ -144,7 +160,7 @@ html, body {
     display: none;
 }
 
-.grade{
+#grade{
     display: none;
 }
 
@@ -185,7 +201,7 @@ html, body {
     justify-content: space-between;
     right: 27%;
 }
-.manual-btn{
+.manualbtn{
     border: 0px solid rgba(255, 255, 255, 0);
     width: 3%;
     height: 8%;

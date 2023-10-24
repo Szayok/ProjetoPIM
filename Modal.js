@@ -1,6 +1,8 @@
 const modal = document.getElementById("modal");
 const fecha = document.getElementById("xis");
 const dias = document.getElementById("dia");
+const botao1 = document.getElementById("radio1");
+const janeiro = document.getElementById("grade");
 
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -14,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     abrirModal();
+    slide_meses();
+
 });
 
 function abrirModal(){
@@ -34,13 +38,12 @@ function abrirModal(){
     
 }
 
-// function tabela(){
-//     const setaE = document.getElementsByClassName("seta-prox");
-//     var Meses = Array.from(document.getElementsByClassName("grade"));
+function slide_meses(){ 
+    var label = Array.from(document.getElementsByClassName("manualbtn"));
 
-//     setaE.forEach((seta-prox) => {
-//         seta-prox.addEventListener("click", function(event){
-//             Meses.style.display = "block";
-//         });
-//     });
-// }
+    label.forEach((manualbtn) => {
+        manualbtn.addEventListener("click", function(event){
+            janeiro.style.display = "block";
+        });
+    });
+}
