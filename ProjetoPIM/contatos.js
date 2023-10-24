@@ -3,6 +3,9 @@ const addModal = document.getElementById("addModal");
 const adicionar = document.getElementById("adicionar");
 const excluir = document.getElementById("excluir")
 
+var pos = 0;
+const table = document.getElementById("table");
+
 document.addEventListener("DOMContentLoaded", function () {
   adicionar.addEventListener("click", function (event) {
     event.preventDefault();
@@ -21,10 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   if (sessionStorage.length != 0) {
-    pos = sessionStorage.length-1;
+    // pos = sessionStorage.length-1;
     var pessoa = [];
     for (let i = 0; i < sessionStorage.length; i++) {
       if (i > 0) {
+        pos += 1;
+
         pessoa = sessionStorage.getItem(i);
 
         const stringPessoa = JSON.parse(pessoa);
@@ -34,9 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
-
-var pos = 0;
-const table = document.getElementById("table");
 
 function armazenar() {
   // session storage
@@ -125,12 +127,11 @@ function busca(){
   var vetor = document.getElementsByClassName("openModal");
 
   for (let i = 0; i < vetor.length; i++) {
+    const linha = document.getElementById("row " + (i+1));
     if (!vetor[i].innerHTML.toLowerCase().includes(barra)) {
-      const linha = document.getElementById("row " + (i+1));
       linha.style.display = "none";
     } else {
-      const linha = document.getElementById("row " + (i+1));
-      linha.style.display = "block";
+      linha.style.display = "table-row";
     }
   }
 }
