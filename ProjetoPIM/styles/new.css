@@ -27,7 +27,7 @@ header{
     display: flex;
     justify-content:space-between;
     align-items: center;
-    padding: 0 2rem 0 2rem;
+    padding: 0 7% 0 7%;
     height: 4.5rem;
 }
 .alinhamento input{
@@ -50,14 +50,7 @@ header{
 h1{
     margin-bottom: 0 !important;
 }
-.alinhamento i:nth-child(1){
-    font-size: 24px;
-    margin-right: 5px;
-}
-.alinhamento i:nth-child(2){
-    margin-left: 5px;
-    margin-right: 5px;
-}
+
 .conteudo{
     background: #ffffff;
     border: none;
@@ -86,6 +79,9 @@ td, th{
 td a {
     color: var(--text);
     text-decoration: none;
+}
+caption{
+    text-align: center;
 }
 .bi-person-plus-fill{
     color: var(--text);
