@@ -138,11 +138,20 @@ pointer-events: none;
     display: block;
     
 }
+.sub-menu li:hover{
+    background-color: var(--primary-color);
+    
+}
 .sub-menu{
     display: none;
-    padding-left: 40px;
-    align-items: center;
-    justify-content: space-evenly;
+    padding-left: 10%;
+    
+}
+.sub-menu li{
+    border-radius: 6px;
+    width: 100%;
+    text-align: center;
+
 }
 .sidebar .menu-bar{
     display: flex;

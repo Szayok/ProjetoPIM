@@ -24,67 +24,85 @@
 <body style="background-color: orange;">
     <nav class="sidebar close">
         <header>
+          <header>
             <div class="image-text">
-                <span class="image">
-                    <img src="/imagens/Solar_Logo.png" alt="Logo_SolarG">
-                </span>
+              <span class="image">
+                <img src="../imagens/Solar_Logo.png" alt="Logo_SolarG" />
+              </span>
             </div>
-        </header>
-        <div class="menu-bar">
+            <i class="bx bx-chevron-right toggle"></i>
+          </header>
+          <div class="menu-bar">
             <div class="menu">
-                <li class="search-box">
-                    <i class="bx bx-search icon"></i>
-                    <input type="search" placeholder="Pesquisar...">
+              <li class="search-box">
+                <i class="bx bx-search icon"></i>
+                <input type="search" placeholder="Pesquisar...">
+              </li>
+              <ul class="menu-links">
+                <li class="nav-link">
+                  <a href="/Pages/Index.html">
+                    <i class="bx bx-home icon"></i>
+                    <span class="text nav-text">Inicio</span>
+                  </a>
                 </li>
-                <ul class="menu-links">
+                <li class="nav-link">
+                  <a href="/Pages/contatos.html">
+                    <i class="bx bx-phone icon"></i>
+                    <span class="text nav-text">Contato</span>
+                  </a>
+                </li>
+                <li class="nav-link">
+                  <a href="/Pages/agenda.html">
+                    <i class="bx bx-book-content icon"></i>
+                    <span class="text nav-text">Agenda</span>
+                  </a>
+                </li>
+                <li class="nav-link">
+                  <a href="/Pages/fornecedores.html">
+                    <i class="bx bx-briefcase icon"></i>
+                    <span class="text nav-text">Fornecedores</span>
+                  </a>
+                </li>
+                <li class="nav-link">
+                  <a href="/Pages/processos.html">
+                    <i class="bx bx-pie-chart icon"></i>
+                    <span class="text nav-text">Processos</span>
+                  </a>
+                </li>
+                <li class="nav-link">
+                  <a href="/Pages/financeiro.html">
+                    <i class=" bx bx-bar-chart icon"></i>
+                    <span class="text nav-text" id="financeiro">Financeiro > </span>
+                  </a>
+                  <ul class="sub-menu">
                     <li class="nav-link">
-                        <a href="Index.html">
-                            <i class="bx bx-home icon"></i>
-                            <span class="text nav-text">Inicio</span>
-                        </a>
+                      <a href="/Pages/despesas.html">
+
+                        <i class="class"></i>
+                        <span class="text nav-text">Despesas</span>
+                      </a>
                     </li>
                     <li class="nav-link">
-                        <a href="/Pages/contatos.html">
-                            <i class="bx bx-phone icon"></i>
-                            <span class="text nav-text">Contato</span>
-                        </a>
+                      <a href="/Pages/receitas.html">
+
+                        <i class="class"></i>
+                        <span class="text nav-text">Receitas</span>
+                      </a>
                     </li>
-                    <li class="nav-link">
-                        <a href="/Pages/agenda.html">
-                            <i class="bx bx-book-content icon"></i>
-                            <span class="text nav-text">Agenda</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="/Pages/fornecedores.html">
-                            <i class="bx bx-briefcase icon"></i>
-                            <span class="text nav-text">Fornecedores</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="/Pages/processos.html">
-                            <i class="bx bx-pie-chart icon"></i>
-                            <span class="text nav-text">Processos</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="/Pages/financeiro.html">
-                            <i class=" bx bx-bar-chart icon"></i>
-                            <span class="text nav-text">Financeiro</span>
-                        </a>
-                    </li>
-                </ul>
+                  </ul>
+                </li>
+              </ul>
             </div>
             <div class="log-out">
-                <li>
-                    <a href="/Pages/login.html">
-                        <i class="bx bx-log-out icon"></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
-                </li>
+              <li>
+                <a href="/Pages/login.html">
+                  <i class="bx bx-log-out icon"></i>
+                  <span class="text nav-text">Logout</span>
+                </a>
+              </li>
             </div>
-        </div>
-    </nav>
+          </div>
+      </nav>
     </div>
 
     <div class="back" style="height: 97%;">
@@ -126,6 +144,7 @@
             </div>
 
             <script src="../js/processos.js"></script>
+            <script src="../js/sidebar.js"></script>
 
 
 </body>
