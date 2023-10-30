@@ -18,7 +18,7 @@ body{
     color: var(--text);
     background: linear-gradient(to right top, #d87306, #e78f00, #f2ac00, #fbca00, #ffe800);
 }
-header{
+header:not(nav header){
     background-color: #ffffff;
     border-radius: 5px 5px 0 0;
     border-bottom: solid 2px #d87306;   
