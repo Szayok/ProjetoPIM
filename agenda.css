@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap');
+
+
+html, body {    
+    margin: 0;
+    height: 100%;
+}
+
+.botao{
+    width: 65px;
+    height: 65px;
+    flex-direction: row;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF6A4;
+    text-align: center;
+    align-content: center;
+    margin-inline: 1.5%; 
+    margin-bottom: 1.5%;
+    border: 2px solid #fff173;
+    font-family: Akshar;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover, #seta-prox:hover{
+    background-color: #fbeb5c;
+}
+
+.dashboard{
+    background-color: rgb(255, 255, 255);
+    width: 7%;
+    height: 100%;
+}
+
+.dashboard img{
+    align-content: center;
+    margin: 8%;
+}
+
+.dashboard i{
+    position: absolute;
+    left: 0%;
+    padding: 1.65%;
+    padding-top: 1%;
+    padding-bottom: 1%; 
+    align-items: center;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.dashboard i:hover{
+background-color: #fbeb5c;
+}
+
+.dashboard a {
+    text-decoration: none;
+    color: #000;
+}
+
+.inicio{
+    background: linear-gradient(107deg, #FFE800 0%, #D87306 100%);
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+}
+
+.home{
+    display: flex;
+    width: 100%;
+    margin: 2%;
+    padding-right: 0%;
+    background-color: #ffffff;
+    border-radius: 2%;
+    align-content: center;
+
+}
+
+.grade,.grade2,.grade3,.grade4{
+    justify-content: space-between;
+    padding-top: 11%;
+    padding: 0%;
+    width: auto;
+    margin-top: 7%;
+    margin-left: 19%;
+}
+
+#fonte{
+    color: #000;
+    text-align: center;
+    font-family: Akshar;
+    font-size: 25px;
+    font-style: normal; 
+    font-weight: 400;
+    line-height: normal;
+}
+
+.myModal {
+    display: none;
+    background-color: #00000038;
+    
+}
+.modal-content{
+    border-radius: 20px;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    background-color: white;
+    height: 80%;
+    width: 80%;
+    font-family: Akshar;
+}
+
+#modal{
+    position: absolute;
+    z-index: 2;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #00000092;
+    text-align: center;
+}
+
+#xis{
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 250%;
+    font-family:'Manrope', sans-serif;
+    color: #1e1e1e;
+}
+
+#seta-prox{
+    width: 50px;
+    height: 50px;
+    background-color:#fff173;
+    border: #00000000;
+    border-radius: 100%;
+    position: absolute;
+    left: 20%;
+    bottom: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.select{
+    position: absolute;
+    right: 15%;
+    height: 35px; 
+    width: 185px; 
+    margin-bottom: 5%; 
+    margin-left: 1.5%;
+}
+
+#tab{
+    display: none;
+}
+
+#grade{
+    width: 80%;
+    height: 50%;
+    display: none;
+    position: absolute;
+    left: 25%;
+}
+
+#grade2{
+    margin-top: 10%;
+    display: none;
+}
+
+#grade3{
+    margin-top: 10%;
+    display: none;
+}
+
+#grade4{
+    margin-top: 10%;
+    display: none;
+}
+
+.slider{
+    width: 100%;
+    height: 100%;
+}
+
+.slides{
+    margin-top: 10%;
+}
+
+.slides input {
+    display: none;
+}
+
+.manual-navigation{
+    position: absolute;
+    margin-inline: 15%;
+    width: 8%;
+    height: 7%;
+    display: flex;
+    justify-content: space-between;
+    right: 27%;
+    bottom: 10%;
+}
+.manualbtn{
+    border: 0px solid rgba(255, 255, 255, 0);
+    width: 3%;
+    height: 8%;
+    background-color: #ffd52e;
+    padding: 5px;
+    border-radius: 10px;    
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+
