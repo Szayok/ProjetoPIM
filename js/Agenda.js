@@ -3,6 +3,9 @@ const fecha = document.getElementById("xis");
 const dias = document.getElementById("dia");
 const botao1 = document.getElementById("radio1");
 const janeiro = document.getElementById("grade");
+var seletor = document.getElementById("fonte");
+var mes = document.getElementsByClassName("meses");
+var manualbtn = document.getElementsByClassName("manualbtn");   
 
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -40,10 +43,39 @@ function abrirModal(){
 
 function slide_meses(){ 
     var label = Array.from(document.getElementsByClassName("manualbtn"));
+    var Mes = manualbtn.id;
 
     label.forEach((manualbtn) => {
         manualbtn.addEventListener("click", function(event){
             janeiro.style.display = "block";
+
+            let p = document.createElement("p");
+            p.textContent = manualbtn.id;
+            
+            document.getElementById("mudarMes").appendChild(p);
         });
     });
 }
+
+// function slide_meses(){
+//     var select = document.querySelector('#fonte');
+//     optionValue = select.options[select.selectedIndex];
+
+//     let value = optionValue.value;
+    
+//     switch(value){
+//         case 'Janeiro':
+//             janeiro.style.display = "block"; 
+//             break;
+//         case 'mes':
+//             janeiro.style.display = "block";
+//             break;
+//         case 'semana':
+//             janeiro.style.display = "block";
+//             break; 
+//         default:
+//             janeiro.style.display = "none";
+//     } 
+
+    
+// }

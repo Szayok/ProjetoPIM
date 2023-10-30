@@ -46,9 +46,10 @@
         <div class="home"> 
             <div>
                 <select class="select" id="fonte">
-                    <option value="Janeiro"> Janeiro
-                    <option value="mes"> Mês
-                    <option value="semana"> Semana
+                    <option value="selecionar"> Selecione o mês</option>
+                    <option value="Janeiro"> Janeiro</option>
+                    <option value="mes"> Mês</option>
+                    <option value="semana"> Semana</option>
                 </select>
             </div>
             <!-- <div>
@@ -65,8 +66,54 @@
                     <input type="radio" name="radio-btn" id="radio3">
                     <input type="radio" name="radio-btn" id="radio4">
                     <!------------------------>
-
-                    <div id="grade"> 
+                    
+                    <div id="grade" class="meses" name="Janeiro"> 
+                        <div> 
+                            <div id="mudarMes"></div>
+                            <div>
+                                <button class="botao" id="1">1 </button>
+                                <button class="botao" id="2">2</button>
+                                <button class="botao" id="3">3</button>
+                                <button class="botao" id="4">4</button>
+                                <button class="botao" id="5">5</button>
+                                <button class="botao" id="6">6</button>
+                                <button class="botao" id="7">7</button>
+                                <button class="botao" id="8">8</button>
+                            </div>
+                            <br>
+                            <div>
+                                <button class="botao" id="9">9</button>
+                                <button class="botao" id="10">10</button>
+                                <button class="botao" id="11">11</button>
+                                <button class="botao" id="12">12</button>
+                                <button class="botao" id="13">13</button>
+                                <button class="botao" id="14">14</button>
+                                <button class="botao" id="15">15</button>
+                                <button class="botao" id="16">16</button>
+                            </div>
+                            <br>
+                            <div>
+                                <button class="botao" id="17">17</button>
+                                <button class="botao" id="18">18</button>
+                                <button class="botao" id="19">19</button>
+                                <button class="botao" id="20">20</button>
+                                <button class="botao" id="21">21</button>
+                                <button class="botao" id="22">22</button>
+                                <button class="botao" id="23">23</button>
+                                <button class="botao" id="24">24</button>
+                            </div>
+                            <br>
+                            <div>
+                                <button class="botao" id="25">25</button>
+                                <button class="botao" id="26">26</button>
+                                <button class="botao" id="27">27</button>
+                                <button class="botao" id="28">28</button>
+                                <button class="botao" id="29">29</button>
+                                <button class="botao" id="30">30</button>   
+                            </div>
+                        </div>
+                    </div>
+                    <div id="grade2" class="meses" name="Fevereiro"> 
                         <div>
                             <button class="botao" id="1">1 </button>
                             <button class="botao" id="2">2</button>
@@ -109,7 +156,7 @@
                             <button class="botao" id="30">30</button>   
                         </div>
                     </div>
-                    <div class="grade2"> 
+                    <div id="grade3" class="meses" name="Março"> 
                         <div>
                             <button class="botao" id="1">1 </button>
                             <button class="botao" id="2">2</button>
@@ -152,50 +199,7 @@
                             <button class="botao" id="30">30</button>   
                         </div>
                     </div>
-                    <div class="grade3"> 
-                        <div>
-                            <button class="botao" id="1">1 </button>
-                            <button class="botao" id="2">2</button>
-                            <button class="botao" id="3">3</button>
-                            <button class="botao" id="4">4</button>
-                            <button class="botao" id="5">5</button>
-                            <button class="botao" id="6">6</button>
-                            <button class="botao" id="7">7</button>
-                            <button class="botao" id="8">8</button>
-                        </div>
-                        <br>
-                        <div>
-                            <button class="botao" id="9">9</button>
-                            <button class="botao" id="10">10</button>
-                            <button class="botao" id="11">11</button>
-                            <button class="botao" id="12">12</button>
-                            <button class="botao" id="13">13</button>
-                            <button class="botao" id="14">14</button>
-                            <button class="botao" id="15">15</button>
-                            <button class="botao" id="16">16</button>
-                        </div>
-                        <br>
-                        <div>
-                            <button class="botao" id="17">17</button>
-                            <button class="botao" id="18">18</button>
-                            <button class="botao" id="19">19</button>
-                            <button class="botao" id="20">20</button>
-                            <button class="botao" id="21">21</button>
-                            <button class="botao" id="22">22</button>
-                            <button class="botao" id="23">23</button>
-                            <button class="botao" id="24">24</button>
-                        </div>
-                        <br>
-                        <div>
-                            <button class="botao" id="25">25</button>
-                            <button class="botao" id="26">26</button>
-                            <button class="botao" id="27">27</button>
-                            <button class="botao" id="28">28</button>
-                            <button class="botao" id="29">29</button>
-                            <button class="botao" id="30">30</button>   
-                        </div>
-                    </div>
-                    <div class="grade4"> 
+                    <div id="grade4" class="meses" name="Abril"> 
                         <div>
                             <button class="botao" id="1">1 </button>
                             <button class="botao" id="2">2</button>
@@ -248,10 +252,10 @@
         
                 </div>
                 <div class="manual-navigation">
-                    <label for="radio1" class="manualbtn"></label>
-                    <label for="radio2" class="manualbtn"></label>
-                    <label for="radio3" class="manualbtn"></label>
-                    <label for="radio4" class="manualbtn"></label>
+                    <label for="radio1" class="manualbtn" id="Janeiro"></label>
+                    <label for="radio2" class="manualbtn" id="Fevereiro"></label>
+                    <label for="radio3" class="manualbtn" id="Março"></label>
+                    <label for="radio4" class="manualbtn" id="Abril"></label>
                 </div>
                 <!------------->
             </div>
@@ -268,6 +272,6 @@
 
         </div>
     </div>
-    <script src="../Modal.js"></script>
+    <script src="../Agenda.js"></script>
 </body>
 </html>

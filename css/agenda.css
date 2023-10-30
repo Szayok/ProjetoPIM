@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap');
 
 
-html, body {
-
+html, body {    
     margin: 0;
     height: 100%;
+    width: auto;
+    font-family: Akshar;
 }
 
 .botao{
@@ -161,20 +162,24 @@ background-color: #fbeb5c;
 }
 
 #grade{
+    width: 80%;
+    height: 50%;
     display: none;
+    position: absolute;
+    left: 25%;
 }
 
-.grade2{
+#grade2{
     margin-top: 10%;
     display: none;
 }
 
-.grade3{
+#grade3{
     margin-top: 10%;
     display: none;
 }
 
-.grade4{
+#grade4{
     margin-top: 10%;
     display: none;
 }
@@ -196,10 +201,11 @@ background-color: #fbeb5c;
     position: absolute;
     margin-inline: 15%;
     width: 8%;
-    height: 5%;
+    height: 7%;
     display: flex;
     justify-content: space-between;
     right: 27%;
+    bottom: 10%;
 }
 .manualbtn{
     border: 0px solid rgba(255, 255, 255, 0);
