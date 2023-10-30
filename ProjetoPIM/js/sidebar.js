@@ -1,20 +1,19 @@
-const sidebar = document.querySelector('.sidebar');
-const toggle = document.querySelector('.menu-links');
-
-toggle.addEventListener('mouseover', () => {
-  sidebar.classList.remove('close'); // Remove a classe close
-});
-
-sidebar.addEventListener('mouseleave', () => {
-  sidebar.classList.add('close'); // Adiciona a classe close quando o mouse deixa a sidebar
-});
+const body = document.querySelector("body");
+sideBar = body.querySelector(".sidebar");
+toggle = body.querySelector(".toggle");
+searchBtn = body.querySelector(".search-box");
+let content = body.querySelector('.content')
 
 toggle.addEventListener("click", () => {
-  sidebar.classList.toggle("close");
+  sideBar.classList.toggle("close");
+  let arrClasses = [];
+  for (let i = 0; i < sideBar.classList.length; i++) {
+    arrClasses.push(sideBar.classList[i]);
+  }
 
-  if (sidebar.classList.contains("close")) {
-    content.style.marginLeft = "55px"; 
+  if (arrClasses.indexOf("close") > -1) {
+    content.style["margin-left"] = "50px"
   } else {
-    content.style.marginLeft = "220px"; 
+    content.style["margin-left"] = "230px"
   }
 });
