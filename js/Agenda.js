@@ -44,12 +44,12 @@ function abrirModal(){
 function slide_meses(){ 
     var label = Array.from(document.getElementsByClassName("manualbtn"));
     var Mes = manualbtn.id;
+    let p = document.createElement("p");
 
     label.forEach((manualbtn) => {
         manualbtn.addEventListener("click", function(event){
             janeiro.style.display = "block";
 
-            let p = document.createElement("p");
             p.textContent = manualbtn.id;
             
             document.getElementById("mudarMes").appendChild(p);
