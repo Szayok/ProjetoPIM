@@ -4,6 +4,9 @@
 html, body {    
     margin: 0;
     height: 100%;
+    width: auto;
+    font-family: Akshar;
+    overflow: hidden;
 }
 
 .botao{
@@ -160,7 +163,7 @@ background-color: #fbeb5c;
 }
 
 #grade{
-    width: 80%;
+    width: 70%;
     height: 50%;
     display: none;
     position: absolute;
@@ -188,7 +191,7 @@ background-color: #fbeb5c;
 }
 
 .slides{
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 .slides input {
@@ -216,5 +219,12 @@ background-color: #fbeb5c;
     transition: 1s;
 }
 
+#mudarMes{
+    margin: 0;
+    margin-left: 1.5%;
+    font-size: 40px;
+}
 
-
+.meses{
+    width: 70%;
+}
