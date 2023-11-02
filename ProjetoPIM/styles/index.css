@@ -56,14 +56,15 @@ body{
 .sidebar.close + .content{
   margin-left: 55px;
 }
-/* Calendar */
 .container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    
-  }
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  
+  
+}
+/* Calendar */
   .calendar {
     width: 30%;
     /* max-width: 400px; */

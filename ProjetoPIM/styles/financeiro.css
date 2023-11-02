@@ -23,6 +23,7 @@
 body{
     height: 100vh;
     background: var(--body-color);
+    margin: 0px;
 }
 .btn{
     background-color: whitesmoke;
