@@ -159,7 +159,7 @@ body{
     opacity: 1;
     pointer-events: all;
   }
-  #abrir{
+  /* #abrir{
   padding: .6rem 1.2rem;
   background-color: var(--primary-color);
   color: black;
@@ -172,7 +172,7 @@ body{
 }
 #abrir:hover{
   opacity: 1;
-}
+} */
 
 #fechar{
   padding: .6rem 1.2rem;
@@ -186,20 +186,6 @@ body{
   transition: var(--tran-03);
 }
 #fechar:hover{
-  opacity: 1;
-}
-#save{
-  background-color: var(--primary-color);
-  border: none;
-  width: 100px;
-  height: 30px;
-  border-radius: 20px;
-  opacity: 0.6;
-  color: black;
-  cursor: pointer;
-  transition: var(--tran-03);
-}
-#save:hover{
   opacity: 1;
 }
 #fade{

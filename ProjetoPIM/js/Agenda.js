@@ -5,7 +5,8 @@ const botao1 = document.getElementById("radio1");
 const janeiro = document.getElementById("grade");
 var seletor = document.getElementById("fonte");
 var mes = document.getElementsByClassName("meses");
-var manualbtn = document.getElementsByClassName("manualbtn");   
+var manualbtn = document.getElementsByClassName("manualbtn");  
+
 
 
 document.addEventListener("DOMContentLoaded", function(){

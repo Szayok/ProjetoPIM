@@ -8,38 +8,101 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="/imagens/solar-panel.png" type="imag/x-icon">
     <link rel="shortcut icon" href="/imagens/solar-panel.png" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles/sidebar.css">
+    
+    <title>SolarGt</title>
 </head>
 <body>
     <div class="inicio">
         <div class="dashboard">
-            <img src="../imagens/Solar_Logo.png" width="80%" height="auto">
-            <i class="bx bxs-right-arrow-circle bx-lg" style="top: 11%; left: 4.5%; color: #FBCA00;border-radius: 100%; background-color: white; border: 0%; padding: 1px;"></i>        
-            <br><br><br><br>
-            <i class="bx bx-search bx-md" style="top: 17.8%;"></i>
-            <a href="/Pages/Index.html">
-                <i class="bx bx-home-alt-2 bx-md" style="top: 25.9%;"></i>
-            </a>
-            <a href="/Pages/contatos.html">
-                <i class="bx bx-phone bx-md" style="top: 34%;"></i>
-            </a>
-            <a href="/Pages/agenda.html">
-                <i class="bx bx-book-content bx-md" style="top: 42.1%;"></i>
-            </a>
-            <a href="/Pages/fornecedores.html">
-                <i class="bx bx-briefcase bx-md" style="top: 50.2%;"></i> 
-            </a>
-            <a href="/Pages/processos.html">
-                <i class="bx bx-pie-chart-alt bx-md" style="top: 58.3%;"></i>
-            </a>
-            <a href="/Pages/financeiro.html">
-                <i class="bx bx-signal-5 bx-md" style="top: 66.4%;"></i> 
-            </a>
-            <a href="/Pages/login.html"></a>
-                <i class="bx bx-log-out  bx-md" style="top: 91.2%;"></i>
-            </a>          
+          <nav class="sidebar close">
+            <header>
+              <div class="image-text">
+                <span class="image">
+                  <img src="../imagens/SolarLogo_white.jpeg" alt="Logo_SolarG" />
+                </span>
+              </div>
+              <i class="bx bx-chevron-right toggle"></i>
+            </header>
+            <div class="menu-bar">
+              <div class="menu">
+                <li class="search-box">
+                  <i class="bx bx-search icon"></i>
+                  <input type="search" placeholder="Pesquisar...">
+                </li>
+                <ul class="menu-links">
+                  <li class="nav-link">
+                    <a href="/Pages/Index.html">
+                      <i class="bx bx-home icon"></i>
+                      <span class="text nav-text">Inicio</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="/Pages/contatos.html">
+                      <i class="bx bx-phone icon"></i>
+                      <span class="text nav-text">Contatos ></span>
+                    </a>
+                    <ul class="sub-menu">
+                      <li class="nav-link">
+                        <a href="/Pages/contatos.html">
+                          <span class="text nav-text">Clientes</span>
+                        </a>
+                      </li>
+                      <li class="nav-link">
+                        <a href="/Pages/contatos.html">
+                          <span class="text nav-text">Empresas</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-link">
+                    <a href="/Pages/agenda.html">
+                      <i class="bx bx-book-content icon"></i>
+                      <span class="text nav-text">Agenda</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="/Pages/fornecedores.html">
+                      <i class="bx bx-briefcase icon"></i>
+                      <span class="text nav-text">Fornecedores</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="/Pages/processos.html">
+                      <i class="bx bx-pie-chart icon"></i>
+                      <span class="text nav-text">Processos</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="/Pages/financeiro.html">
+                      <i class=" bx bx-bar-chart icon"></i>
+                      <span class="text nav-text">Financeiro > </span>
+                    </a>
+                    <ul class="sub-menu">
+                      <li class="nav-link">
+                        <a href="/Pages/despesas.html">
+                          <span class="text nav-text">Despesas</span>
+                        </a>
+                      </li>
+                      <li class="nav-link">
+                        <a href="/Pages/receitas.html">
+                          <span class="text nav-text">Receitas</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="log-out">
+                <li>
+                  <a href="/Pages/login.html">
+                    <i class="bx bx-log-out icon"></i>
+                    <span class="text nav-text">Logout</span>
+                  </a>
+                </li>
+              </div>
+            </div>
+          </nav>
 
 
         </div>
@@ -273,5 +336,6 @@
         </div>
     </div>
     <script src="../js/Agenda.js"></script>
+    <script src="../js/sidebar.js"></script>
 </body>
 </html>

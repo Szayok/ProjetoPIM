@@ -31,7 +31,7 @@ html, body {
     background-color: #fbeb5c;
 }
 
-.dashboard{
+/* .dashboard{
     background-color: rgb(255, 255, 255);
     width: 7%;
     height: 100%;
@@ -67,7 +67,7 @@ background-color: #fbeb5c;
     display: flex;
     height: 100%;
     flex-direction: row;
-}
+} */
 
 .home{
     display: flex;
