@@ -2,160 +2,184 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Processsos - SolarG</title>
-  <link rel="stylesheet" href="../styles/processos.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="/styles/sidebar.css">
-  <link rel="icon" href="imagens/solar-panel.png" type="imag/x-icon">
-  <link rel="shortcut icon" href="imagens/solar-panel.png" type="image/x-icon">
-  <script src="https://cdn.plot.ly/plotly-2.26.0.min.js" charset="utf-8"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processos - SolarG</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="..imagens/solar-panel.png" type="imag/x-icon">
+    <link rel="shortcut icon" href="..imagens/solar-panel.png" type="image/x-icon">
+    <script src="https://cdn.plot.ly/plotly-2.26.0.min.js" charset="utf-8"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="processos.css">
 </head>
 
 <body>
-  <div class="wrapper">
+    <div class="wrapper">
 
-    <body style="background-color: orange;">
-      <nav class="sidebar close">
-        <header>
-          <div class="image-text">
-            <span class="image">
-              <img src="../imagens/SolarLogo_white.jpeg" alt="Logo_SolarG" />
-            </span>
-          </div>
-          <i class="bx bx-chevron-right toggle"></i>
-        </header>
-        <div class="menu-bar">
-          <div class="menu">
-            <li class="search-box">
-              <i class="bx bx-search icon"></i>
-              <input type="search" placeholder="Pesquisar...">
-            </li>
-            <ul class="menu-links">
-              <li class="nav-link">
-                <a href="/Pages/Index.html">
-                  <i class="bx bx-home icon"></i>
-                  <span class="text nav-text">Inicio</span>
-                </a>
-              </li>
-              <li class="nav-link">
-                <a href="/Pages/contatos.html">
-                  <i class="bx bx-phone icon"></i>
-                  <span class="text nav-text">Contatos ></span>
-                </a>
-                <ul class="sub-menu">
-                  <li class="nav-link">
-                    <a href="/Pages/contatos.html" class="submenu-link">
-                      <i class="bx bx-male"></i>
-                      <span class="text nav-text">Clientes</span>
-                    </a>
-                  </li>
-                  <li class="nav-link">
-                    <a href="/Pages/contatos.html" class="submenu-link">
-                      <i class="bx bx-buildings"></i>
-                      <span class="text nav-text">Empresas</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-link">
-                <a href="/Pages/agenda.html">
-                  <i class="bx bx-book-content icon"></i>
-                  <span class="text nav-text">Agenda</span>
-                </a>
-              </li>
-              <li class="nav-link">
-                <a href="/Pages/fornecedores.html">
-                  <i class="bx bx-briefcase icon"></i>
-                  <span class="text nav-text">Fornecedores</span>
-                </a>
-              </li>
-              <li class="nav-link">
-                <a href="/Pages/processos.html">
-                  <i class="bx bx-pie-chart icon"></i>
-                  <span class="text nav-text">Processos</span>
-                </a>
-              </li>
-              <li class="nav-link">
-                <a href="/Pages/financeiro.html">
-                  <i class=" bx bx-bar-chart icon"></i>
-                  <span class="text nav-text">Financeiro > </span>
-                </a>
-                <ul class="sub-menu">
-                  <li class="nav-link">
-                    <a href="/Pages/despesas.html" class="submenu-link">
-                      <i class="bx bx-bar-chart-square"></i>
-                      <span class="text nav-text">Despesas</span>
-                    </a>
-                  </li>
-                  <li class="nav-link">
-                    <a href="/Pages/receitas.html" class="submenu-link">
-                      <i class="bx bx-receipt"></i>
-                      <span class="text nav-text">Receitas</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="log-out">
-            <li>
-              <a href="/Pages/login.html">
-                <i class="bx bx-log-out icon"></i>
-                <span class="text nav-text">Logout</span>
-              </a>
-            </li>
-          </div>
-        </div>
-      </nav>
-  </div>
-
-  <div class="back" style="height: 97%;">
-    <div class="content">
-      <a data-bs-toggle="modal" data-bs-target="#newcard">
-        <div>
-          <p class="card">NOVA FASE</p>
-        </div>
-      </a>
+        <body style="background-color: orange;">
+            <nav class="sidebar close">
+                <header>
+                    <div class="image-text">
+                        <span class="image">
+                            <img src="../imagens/Solar_Logo.png" alt="Logo_SolarG">
+                        </span>
+                    </div>
+                    <i class="bx bx-chevron-right toggle"></i>
+                </header>
+                <div class="menu-bar">
+                    <div class="menu">
+                        <li class="search-box">
+                            <i class="bx bx-search icon"></i>
+                            <input type="search" placeholder="Pesquisar...">
+                        </li>
+                        <ul class="menu-links">
+                            <li class="nav-link">
+                                <a href="Index.html">
+                                    <i class="bx bx-home icon"></i>
+                                    <span class="text nav-text">Inicio</span>
+                                </a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="/Pages/contatos.html">
+                                    <i class="bx bx-phone icon"></i>
+                                    <span class="text nav-text">Contato</span>
+                                </a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="/Pages/agenda.html">
+                                    <i class="bx bx-book-content icon"></i>
+                                    <span class="text nav-text">Agenda</span>
+                                </a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="/Pages/fornecedores.html">
+                                    <i class="bx bx-briefcase icon"></i>
+                                    <span class="text nav-text">Fornecedores</span>
+                                </a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="/Pages/processos.html">
+                                    <i class="bx bx-pie-chart icon"></i>
+                                    <span class="text nav-text">Processos</span>
+                                </a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="/Pages/financeiro.html">
+                                    <i class=" bx bx-bar-chart icon"></i>
+                                    <span class="text nav-text">Financeiro</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="log-out">
+                        <li>
+                            <a href="/Pages/login.html">
+                                <i class="bx bx-log-out icon"></i>
+                                <span class="text nav-text">Logout</span>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </nav>
     </div>
 
-  </div>
-  </div>
-
-  <div style="padding-top: 5%;" class="modal fade" id="newcard" tabindex="-1" aria-labelledby="cadastroModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="cadastroModalLabel">Novo card</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="back" style="height: 97%;">
+        <div class="content">
+            <div class="card">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        PROSPECÇÃO
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Editar</a></li>
+                        <li><a class="dropdown-item" href="#">Excluir</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <div class="mb-3">
-            <div class="add-card-form">
-              <input type="text" id="card-content" placeholder="Título do Card" />
-
+        <br>
+        <div class="content">
+            <div class="card-list">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a id="openModalBtn">João Haroldo</a>
+                    </li>
+                    <li class="list-group-item">Vision</li>
+                    <li class="list-group-item">Uniamérica</li>
+                </ul>
             </div>
-            <div id="card-container">
-
-
-            </div>
-            <div class="modal-footer">
-              <button data-bs-toggle="modal" data-bs-target="#Sucesso" type="button" class="btn btn-black"
-                id="add-card">Adicionar</button>
-            </div>
-          </div>
         </div>
-      </div>
 
-      <script src="../js/processos.js"></script>
-      <script src="../js/sidebar.js"></script>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-style">
+            <span class="close" id="closemod" style="padding-right: 10px;">&times;</span>
+            <div class="modal-header">
+                <div class="row col-md-8">
+                    <div class="column left">
+                        <h2 style="padding-left: 12px;">João Haroldo</h2>
+                        <div class="modal-body">
+                            <button class="mod-botao" id="modalDados">Dados</button>
+                            <button class="mod-botao" style="margin-left: 8px;" id="modalAnexos">Anexos</button>
+                            <button class="mod-botao" style="margin-left: 8px;" id="modalAnotacoes">Anotações</button>
+                            <br><br>
+                            <div class="modal-section" id="modalDados">
+                                <label for="name">Nome</label>
+                                <input disabled type="text" class="name" name="firstname" placeholder="João Haroldo">
+                                <div style="display: flex;">
+                                    <div style="display: block;">
+                                        <label for="documento">CPF/CNPJ</label>
+                                        <br>
+                                        <input disabled type="text" class="documento" name="numdocs"
+                                            placeholder="123.456.789-00">
+                                    </div>
+                                    <div style="margin-left: 40px;">
+                                        <label for="documento">Data de Nascimento</label>
+                                        <br>
+                                        <input disabled type="text" class="documento" name="numdocs"
+                                            placeholder="25/12/1985">
+                                    </div>
+                                </div>
+                                <div style="display: flex;">
+                                    <div style="display: block;">
+                                        <label for="doc-rua">Rua</label>
+                                        <br>
+                                        <input disabled type="text" class="rua" name="numdocs"
+                                            placeholder="Av. Jorge Schimmelfeng">
+                                    </div>
+                                    <div>
+                                        <label for="doc-num">Nº</label>
+                                        <br>
+                                        <input disabled type="text" class="num" name="numdocs" placeholder="2589">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modalAnexos" id="modalAnexos">
+                                <label for="file">Anexar Documento</label>
+                                <input type="file" id="file">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <h2 style="font-size: medium;" style="align-items: top !important;">Mover para card</h2>
+                    <p>Some text..</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="../js/processos.js"></script>
 
 
 </body>
