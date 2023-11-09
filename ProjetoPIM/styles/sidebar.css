@@ -153,9 +153,7 @@
     
     
 }
-.sub-text{
-    align-items: center;
-}
+
 .sub-menu li:hover{
     background-color: var(--primary-color);
     
@@ -166,6 +164,7 @@
     
 }
 .sub-menu li{
+    background-color: white;
     border-radius: 6px;
     width: 100%;
     
