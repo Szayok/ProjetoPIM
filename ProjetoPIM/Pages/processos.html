@@ -123,8 +123,8 @@
         <br>
         <div class="content">
           <div class="card-list">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
+            <ul class="list-group list-group-flush" id="lista">
+              <li class="list-group-item" id="p1">
                 <a id="openModalBtn">João Haroldo</a>
               </li>
               <li class="list-group-item">Vision</li>
@@ -146,7 +146,7 @@
       <div class="modal-header">
         <div class="row col-md-8">
           <div class="column left">
-            <h2 style="padding-left: 12px;">João Haroldo</h2>
+            <h2 style="padding-left: 12px;" id="titulo">João Haroldo</h2>
             <div class="modal-body">
               <button class="mod-botao" id="modalDados">Dados</button>
               <button class="mod-botao" style="margin-left: 8px;" id="modalAnexos">Anexos</button>
@@ -154,29 +154,29 @@
               <br><br>
               <div class="modal-section" id="modalDados">
                 <label>Nome</label>
-                <input disabled type="text" class="name" name="firstname" value="João Haroldo">
+                <input disabled type="text" class="name" id="mudarNome" name="firstname" value="João Haroldo">
                 <div style="display: flex;">
                   <div style="display: block;">
                     <label>CPF/CNPJ</label>
                     <br>
-                    <input disabled type="text" class="documento" name="numdocs" value="123.456.789-00">
+                    <input disabled type="text" class="documento" id="mudarCPF" name="numdocs" value="123.456.789-00">
                   </div>
                   <div style="margin-left: 40px;">
                     <label>Data de Nascimento</label>
                     <br>
-                    <input disabled type="text" class="documento" name="numdocs" value="25/12/1985">
+                    <input disabled type="text" class="documento" id="mudarData" name="numdocs" value="25/12/1985">
                   </div>
                 </div>
                 <div style="display: flex;">
                   <div style="display: block;">
                     <label>Rua</label>
                     <br>
-                    <input disabled type="text" class="rua" name="numdocs" value="Av. Jorge Schimmelfeng">
+                    <input disabled type="text" class="rua" id="mudarRua" name="numdocs" value="Av. Jorge Schimmelfeng">
                   </div>
                   <div>
                     <label>Nº</label>
                     <br>
-                    <input disabled type="text" class="num" name="numdocs" value="2589">
+                    <input disabled type="text" class="num" id="mudarNumero" name="numdocs" value="2589">
                   </div>
                 </div>
               </div>

@@ -30,10 +30,11 @@ document.addEventListener("DOMContentLoaded", function () {
         pessoa = sessionStorage.getItem("p"+c);
         
         const stringPessoa = JSON.parse(pessoa);
-        console.log(stringPessoa.nome);
+        console.log(stringPessoa.nome, i, c);
         
         criarTabela(stringPessoa);
         c++;
+        i = 0;
       }
     }
   }
@@ -76,8 +77,6 @@ function criarTabela(pessoas) {
   var link = document.createElement("a");
 
   texto = document.createTextNode(pessoas.nome);
-
-  console.log(pos);
 
   link.appendChild(texto);
   link.href = "#";
@@ -147,15 +146,15 @@ function criarModal() {
 function busca(){
   let barra = document.getElementById("procura").value;
   barra = barra.toLowerCase();
-  var vetor = document.getElementsByClassName("openModal");
-  
+  var vetor = document.querySelectorAll(".openModal");
+
   for (let i = 0; i < vetor.length; i++) {
     if (!vetor[i].innerHTML.toLowerCase().includes(barra)) {
-      const linha = document.getElementById("row " + (i+1));
+      let linha = document.getElementById("row " + (i+1));
       linha.style.display = "none";
     } else {
-      const linha = document.getElementById("row " + (i+1));
-      linha.style.display = "table-block";
+      let linha = document.getElementById("row " + (i+1));
+      linha.style.display = "table-row";
     }
   }
 }
