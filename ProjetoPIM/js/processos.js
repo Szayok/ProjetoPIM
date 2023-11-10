@@ -1,10 +1,10 @@
 let modal = document.getElementById("myModal");
 let addCard = document.getElementById("newcard");
+let closeModalBtn = document.querySelectorAll(".fechar");
 
 document.addEventListener("DOMContentLoaded", function () {
   let openModalBtn = document.getElementById("openModalBtn");
   let addCardBtn = document.getElementById("addCardBtn");
-
 
   window.addEventListener("click", function (event) {
     if (event.target == modal) {
@@ -22,9 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
     addCard.style.display = "block";
   });
 
-  var closeModalBtn = document.getElementById("closemod");
-  closeModalBtn.addEventListener("click", function () {
-    modal.style.display = "none";
+  closeModalBtn.forEach(closemod => {
+    closemod.addEventListener("click", function () {
+      modal.style.display = "none";
+      addCard.style.display = "none";
+    });
+    
   });
 });
 

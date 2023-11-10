@@ -2,7 +2,7 @@ const modal = document.getElementById("myModal");
 const addModal = document.getElementById("addModal");
 const table = document.getElementById("table");
 
-var pos = 0;
+let pos = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
   adicionar.addEventListener("click", function (event) {
@@ -17,20 +17,23 @@ document.addEventListener("DOMContentLoaded", function () {
       addModal.style.display = "none";
 
       document.getElementById("nome").value = null;
-      document.getElementById("telefone").value = null;
     }
   });
 
-  if (sessionStorage.length != 0) {
-    var pessoa = [];
+  if (sessionStorage.length > 1) {
+    let pessoa = [];
+    let c = 1;
+
     for (let i = 0; i < sessionStorage.length; i++) {
-      if (i > 0) {
+      if (sessionStorage.key(i) == "p"+c) {
         pos++;
-        pessoa = sessionStorage.getItem(i);
-
+        pessoa = sessionStorage.getItem("p"+c);
+        
         const stringPessoa = JSON.parse(pessoa);
-
+        console.log(stringPessoa.nome);
+        
         criarTabela(stringPessoa);
+        c++;
       }
     }
   }
@@ -38,21 +41,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function armazenar() {
   // session storage
-  var nome = document.getElementById("nome").value;
-  var telefone = document.getElementById("telefone").value;
-
-  pos += 1;
+  pos++;
 
   var pessoa = {
-    nome: nome,
-    telefone: telefone,
+    nome: document.getElementById("nome").value,
+    cpf: document.getElementById("cpf").value,
+    data: document.getElementById("data").value,
+    rua: document.getElementById("rua").value,
+    numero: document.getElementById("numero").value
   };
 
   criarTabela(pessoa);
 
   const stringPessoa = JSON.stringify(pessoa);
 
-  sessionStorage.setItem(pos, stringPessoa);
+  sessionStorage.setItem("p"+pos, stringPessoa);
 
 }
 
@@ -74,10 +77,12 @@ function criarTabela(pessoas) {
 
   texto = document.createTextNode(pessoas.nome);
 
+  console.log(pos);
+
   link.appendChild(texto);
   link.href = "#";
   link.className = "openModal";
-  link.id = pos;
+  link.id = "p"+pos;
 
   td.appendChild(link);
 
@@ -101,7 +106,7 @@ function criarTabela(pessoas) {
 
 function criarModal() {
   var open = Array.from(document.getElementsByClassName("openModal"));
-  const span = Array.from(document.getElementsByClassName("fechar"));
+  var span = document.querySelectorAll(".fechar");
   var excluir = document.querySelectorAll(".btn-danger");
 
   open.forEach((openModal) => {
@@ -112,9 +117,12 @@ function criarModal() {
 
       const pessoa = JSON.parse(stringPessoa);
 
-      // document.getElementById("mudarNome").value
-      document.getElementById("mudarNome").innerHTML = pessoa.nome;
-      document.getElementById("mudarTelefone").innerHTML = pessoa.telefone;
+      document.getElementById("titulo").innerHTML = pessoa.nome;
+      document.getElementById("mudarNome").value = pessoa.nome;
+      document.getElementById("mudarCPF").value = pessoa.cpf;
+      document.getElementById("mudarData").value = pessoa.data;
+      document.getElementById("mudarRua").value = pessoa.rua;
+      document.getElementById("mudarNumero").value = pessoa.numero;
     });
   });
 
@@ -126,13 +134,12 @@ function criarModal() {
     });
   });
 
-  span.forEach((close) => {
-    close.addEventListener("click", function () {
+  span.forEach((fechar) => {
+    fechar.addEventListener("click", function () {
       addModal.style.display = "none";
       modal.style.display = "none";
 
       document.getElementById("nome").value = null;
-      document.getElementById("telefone").value = null;
     });
   });
 }
