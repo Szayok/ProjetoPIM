@@ -33,84 +33,39 @@ function createSection () {
   let cardContent = document.getElementById("card-content").value;
   let background = document.getElementById("cardSection");
   
-  //Create Card Section
-  let br = document.createElement("br");
-  let createSection = document.createElement("section");
-
-  //--------------------------
-
-  //Create Card Title
-  let createCardContent = document.createElement("div");
-  let createCard = document.createElement("div");
-  let ulCard = document.createElement("ul");
-  let liCard = document.createElement("li");
-  let aCard = document.createElement("a");
-  
-  let dropdown = document.createElement("div");
-  let btn = document.createElement("button");
-  
-  //create card Title content
-  let type = document.createElement("type");
-  let dbt = document.createElement("data-bs-toggle");
-  let aria = document.createElement("aria-expanded");
-  
-  createCardContent.className = "content";
-  createCard.className = "card";
-
-  type.value = "button";
-  dbt.value = "dropdown";
-  aria.value = "false";
-
-  dropdown.className = "dropdown";
-  btn.className = "btn dropdown-toggle";
-  btn.appendChild(type);
-  btn.appendChild(dbt);
-  btn.appendChild(aria);
-  btn.innerText = cardContent;
-  
-  ulCard.className = "dropdown-menu";
-  aCard.className = "dropdown-item";
-  aCard.id = "addCardBtn";
-  aCard.href = "#";
-
-  //Append card Title
-  liCard.appendChild(aCard);
-  ulCard.appendChild(liCard);
-  dropdown.appendChild(btn);
-  dropdown.appendChild(ulCard);
-
-  createCard.appendChild(dropdown);
-  createCardContent.appendChild(createCard);
-
-  //--------------------------
-
-  //Create Card list
-  let createCardList = document.createElement("div");
-  let createList = document.createElement("div");
-  let ulList = document.createElement("ul");
-  let liList = document.createElement("li");
-  let aList = document.createElement("a");
-
-  //create card List Content
-  createCardList.className = "content";
-  createList.className = "card-list";
-  
-  ulList.className = "list-group list-group-flush";
-  liList.className = "list-group-item";
-  aList.id = "openModalBtn";
-  aList.textContent = "João Haroldo"
-
-  //Append Card List
-  liList.appendChild(aList);
-  ulList.appendChild(liList);
-  createList.appendChild(ulList);
-  createCardList.appendChild(createList);
-
-  createSection.appendChild(createCardContent);
-  createSection.appendChild(br);
-  createSection.appendChild(createCardList);
-
-  background.appendChild(createSection);
+  var section = `
+  <div class="cardSection" id="cardSection">
+      <section>
+        <div class="content">
+          <div class="card">
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ${cardContent}
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" id="addCardBtn" href="#">Adicionar</a></li>
+                <li><a class="dropdown-item" href="#">Editar</a></li>
+                <li><a class="dropdown-item" href="#">Excluir</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="content">
+          <div class="card-list">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a id="openModalBtn">João Haroldo</a>
+              </li>
+              <li class="list-group-item">Vision</li>
+              <li class="list-group-item">Uniamérica</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  `;
+  background.innerHTML += section;
 
   document.getElementById("card-content").value = null;
   addCard.style.display = "none";

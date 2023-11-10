@@ -2,20 +2,16 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processos - SolarG</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="..imagens/solar-panel.png" type="imag/x-icon">
-    <link rel="shortcut icon" href="..imagens/solar-panel.png" type="image/x-icon">
-    <script src="https://cdn.plot.ly/plotly-2.26.0.min.js" charset="utf-8"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script>
-    <link rel="stylesheet" href="../styles/sidebar.css">
-    <link rel="stylesheet" href="../styles/processos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Processos - SolarG</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" href="..imagens/solar-panel.png" type="imag/x-icon">
+  <link rel="shortcut icon" href="..imagens/solar-panel.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/sidebar.css">
+  <link rel="stylesheet" href="../styles/processos.css">
 </head>
 
 <body>
@@ -108,122 +104,126 @@
     </div>
   </nav>
 
-    <div class="back" id="background" style="height: 97%;">
-        <div class="cardSection" id="cardSection">
-        <section>
-            <div class="content">
-                <div class="card">
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            PROSPECÇÃO
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" id="addCardBtn" href="#">Adicionar</a></li>
-                            <li><a class="dropdown-item" href="#">Editar</a></li>
-                            <li><a class="dropdown-item" href="#">Excluir</a></li>
-                        </ul>
-                    </div>
-                </div>
+  <div class="back" id="background" style="height: 97%;">
+    <div class="cardSection" id="cardSection">
+      <section>
+        <div class="content">
+          <div class="card">
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PROSPECÇÃO
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Editar</a></li>
+                <li><a class="dropdown-item" href="#">Excluir</a></li>
+              </ul>
             </div>
-            <br>
-            <div class="content">
-                <div class="card-list">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <a id="openModalBtn">João Haroldo</a>
-                        </li>
-                        <li class="list-group-item">Vision</li>
-                        <li class="list-group-item">Uniamérica</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    </div>
-
-    <div id="myModal" class="modal">
-        <div class="modal-style">
-            <span class="fechar" id="closemod" style="padding-right: 10px;">&times;</span>
-            <div class="modal-header">
-                <div class="row col-md-8">
-                    <div class="column left">
-                        <h2 style="padding-left: 12px;">João Haroldo</h2>
-                        <div class="modal-body">
-                            <button class="mod-botao" id="modalDados">Dados</button>
-                            <button class="mod-botao" style="margin-left: 8px;" id="modalAnexos">Anexos</button>
-                            <button class="mod-botao" style="margin-left: 8px;" id="modalAnotacoes">Anotações</button>
-                            <br><br>
-                            <div class="modal-section" id="modalDados">
-                                <label>Nome</label>
-                                <input disabled type="text" class="name" name="firstname" value="João Haroldo">
-                                <div style="display: flex;">
-                                    <div style="display: block;">
-                                        <label>CPF/CNPJ</label>
-                                        <br>
-                                        <input disabled type="text" class="documento" name="numdocs"
-                                            value="123.456.789-00">
-                                    </div>
-                                    <div style="margin-left: 40px;">
-                                        <label>Data de Nascimento</label>
-                                        <br>
-                                        <input disabled type="text" class="documento" name="numdocs" value="25/12/1985">
-                                    </div>
-                                </div>
-                                <div style="display: flex;">
-                                    <div style="display: block;">
-                                        <label>Rua</label>
-                                        <br>
-                                        <input disabled type="text" class="rua" name="numdocs"
-                                            value="Av. Jorge Schimmelfeng">
-                                    </div>
-                                    <div>
-                                        <label>Nº</label>
-                                        <br>
-                                        <input disabled type="text" class="num" name="numdocs" value="2589">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="modalAnexos" id="modalAnexos">
-                                <label for="file">Anexar Documento</label>
-                                <input type="file" id="file">
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="column right">
-                    <h2 style="font-size: medium;" style="align-items: top !important;">Mover para card</h2>
-                    <p>Some text..</p>
-                </div>
-            </div>
+          </div>
         </div>
+        <br>
+        <div class="content">
+          <div class="card-list">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a id="openModalBtn">João Haroldo</a>
+              </li>
+              <li class="list-group-item">Vision</li>
+              <li class="list-group-item">Uniamérica</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
+  </div>
 
-    <div style="padding-top: 5%;" class="modal" id="newcard" tabindex="-1" aria-labelledby="cadastroModalLabel"
-        aria-hidden="true">
-        <div class="modal-style">
-            <div class="modal-header">
-                <h5 class="modal-title" id="cadastroModalLabel">Novo card</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
+  <div class="posicao">
+    <button type="button" id="addCardBtn" class="btn btn-warning"><i class="bi bi-person-plus-fill"></i></button>
+  </div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-style">
+      <span class="fechar" id="closemod" style="padding-right: 10px;">&times;</span>
+      <div class="modal-header">
+        <div class="row col-md-8">
+          <div class="column left">
+            <h2 style="padding-left: 12px;">João Haroldo</h2>
             <div class="modal-body">
-                <div class="mb-3">
-                    <div class="add-card-form">
-                        <input type="text" id="card-content" placeholder="Título do Card" />
-                    </div>
-                    <div class="modal-footer">
-                        <button data-bs-toggle="modal" data-bs-target="#Sucesso" type="button" class="btn btn-black"
-                            id="add-card" onclick="createSection()">Adicionar</button>
-                    </div>
+              <button class="mod-botao" id="modalDados">Dados</button>
+              <button class="mod-botao" style="margin-left: 8px;" id="modalAnexos">Anexos</button>
+              <button class="mod-botao" style="margin-left: 8px;" id="modalAnotacoes">Anotações</button>
+              <br><br>
+              <div class="modal-section" id="modalDados">
+                <label>Nome</label>
+                <input disabled type="text" class="name" name="firstname" value="João Haroldo">
+                <div style="display: flex;">
+                  <div style="display: block;">
+                    <label>CPF/CNPJ</label>
+                    <br>
+                    <input disabled type="text" class="documento" name="numdocs" value="123.456.789-00">
+                  </div>
+                  <div style="margin-left: 40px;">
+                    <label>Data de Nascimento</label>
+                    <br>
+                    <input disabled type="text" class="documento" name="numdocs" value="25/12/1985">
+                  </div>
                 </div>
+                <div style="display: flex;">
+                  <div style="display: block;">
+                    <label>Rua</label>
+                    <br>
+                    <input disabled type="text" class="rua" name="numdocs" value="Av. Jorge Schimmelfeng">
+                  </div>
+                  <div>
+                    <label>Nº</label>
+                    <br>
+                    <input disabled type="text" class="num" name="numdocs" value="2589">
+                  </div>
+                </div>
+              </div>
+
+              <div class="modalAnexos" id="modalAnexos">
+                <label for="file">Anexar Documento</label>
+                <input type="file" id="file">
+              </div>
+
             </div>
+          </div>
         </div>
+        <div class="column right">
+          <h2 style="font-size: medium;" style="align-items: top !important;">Mover para card</h2>
+          <p>Some text..</p>
+        </div>
+      </div>
     </div>
-    <script src="../js/sidebar.js"></script>
-    <script src="../js/processos.js"></script>
+  </div>
+
+  <div style="padding-top: 5%;" class="modal" id="newcard" tabindex="-1" aria-labelledby="cadastroModalLabel"
+    aria-hidden="true">
+    <div class="modal-style">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cadastroModalLabel">Novo card</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <div class="add-card-form">
+            <input type="text" id="card-content" placeholder="Título do Card" />
+          </div>
+          <div class="modal-footer">
+            <button data-bs-toggle="modal" data-bs-target="#Sucesso" type="button" class="btn btn-black" id="add-card"
+              onclick="createSection()">Adicionar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.plot.ly/plotly-2.26.0.min.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+  </script>
+  <script src="../js/sidebar.js"></script>
+  <script src="../js/processos.js"></script>
 
 
 </body>
