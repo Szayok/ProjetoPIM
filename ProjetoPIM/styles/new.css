@@ -242,3 +242,20 @@ textarea {
     color: var(--text);
     font-size: 22px;
 }
+
+.editar {
+    position: fixed;
+    right: 12%;
+    bottom: 18%;
+    color: var(--text);
+    font-size: 22px;
+}
+
+.aceitar {
+    display: none;
+    position: fixed;
+    right: 20%;
+    bottom: 18%;
+    color: var(--text);
+    font-size: 22px;
+}

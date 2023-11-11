@@ -139,7 +139,7 @@
         </table>
       </div>
       <div class="posicao">
-        <button type="button" id="adicionar" class="btn btn-warning"><i class="bi bi-person-plus-fill"></i></button>
+        <button type="button" id="adicionar" class="btn btn-warning" onclick="abrirModal()"><i class="bi bi-person-plus-fill"></i></button>
       </div>
     </main>
 
@@ -147,7 +147,7 @@
     <div class="modal" id="myModal">
       <div class="modal-content">
         <span class="fechar" id="closemod" style="padding-right: 10px;">&times;</span>
-        <h2 style="padding-left: 12px;", id="titulo">Nome</h2>
+        <h2 style="padding-left: 12px;" , id="titulo">Nome</h2>
         <button class="mod-botao" id="modalDados">Dados</button>
         <button class="mod-botao" style="margin-left: 8px;" id="modalAnexos">Anexos</button>
         <button class="mod-botao" style="margin-left: 8px;" id="modalAnotacoes">Anotações</button>
@@ -180,6 +180,8 @@
             </div>
           </div>
         </div>
+        <button onclick="editar()" class="editar btn btn-warning">Editar</button>
+        <button onclick="aceitar()" class="aceitar btn btn-warning" id="aceitar">aceitar</button>
       </div>
     </div>
 

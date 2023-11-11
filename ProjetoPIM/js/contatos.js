@@ -1,14 +1,12 @@
 const modal = document.getElementById("myModal");
 const addModal = document.getElementById("addModal");
 const table = document.getElementById("table");
+let butao = document.getElementById("aceitar");
+let input = document.querySelectorAll("#modalDados input");
 
 let pos = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
-  adicionar.addEventListener("click", function (event) {
-    event.preventDefault();
-    addModal.style.display = "block";
-  });
 
   window.addEventListener("click", function (event) {
     if (event.target == modal) {
@@ -17,6 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
       addModal.style.display = "none";
 
       document.getElementById("nome").value = null;
+      document.getElementById("cpf").value = null;
+      document.getElementById("data").value = null;
+      document.getElementById("rua").value = null;
+      document.getElementById("numero").value = null;
     }
   });
 
@@ -38,7 +40,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
+
+  criarModal();
 });
+
+function abrirModal() {
+    if (input[0].getAttribute("disabled") != null) {
+      for (let i = 0; i < input.length; i++) {
+        input[i].removeAttribute("disabled");
+      }
+    }
+    addModal.style.display = "block";
+}
 
 function armazenar() {
   // session storage
@@ -122,6 +135,9 @@ function criarModal() {
       document.getElementById("mudarData").value = pessoa.data;
       document.getElementById("mudarRua").value = pessoa.rua;
       document.getElementById("mudarNumero").value = pessoa.numero;
+      for (let i = 0; i < input.length; i++) {
+        input[i].setAttribute("disabled", "true");
+      }
     });
   });
 
@@ -139,6 +155,10 @@ function criarModal() {
       modal.style.display = "none";
 
       document.getElementById("nome").value = null;
+      document.getElementById("cpf").value = null;
+      document.getElementById("data").value = null;
+      document.getElementById("rua").value = null;
+      document.getElementById("numero").value = null;
     });
   });
 }
@@ -157,4 +177,20 @@ function busca(){
       linha.style.display = "table-row";
     }
   }
+}
+
+function editar() {
+  for (let i = 0; i < input.length; i++) {
+    input[i].removeAttribute("disabled");
+  }
+
+  butao.style.display = "block";
+}
+
+function aceitar() {
+  for (let i = 0; i < input.length; i++) {
+    input[i].setAttribute("disabled", "true");
+  }
+
+  butao.style.display = "none";
 }
