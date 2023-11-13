@@ -1,0 +1,192 @@
+/*fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --body-color: #E4E9F7;
+    --sidebar-color:#FFF;
+    --primary-color:#fbca00;
+    --primary-color-light:#F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+    /* transição*/
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+body{
+    height: 100vh;
+    background: var(--body-color);
+    margin: 0px;
+}
+.btn{
+    background-color: whitesmoke;
+}
+
+.btn-pagar{
+    font-weight: 500;
+    color: var(--text-color);
+    transition: var(--tran-02);
+    opacity: 1;
+    border-radius: 6px;
+    padding: 2px 10px;
+    font-size: 12px;
+    border: none;
+}
+.btn-cadastrar{
+    font-weight: 500;
+    color: var(--text-color);
+    transition: var(--tran-02);
+    opacity: 1;
+    border-radius: 6px;
+    padding: 5px 15px;
+    font-size: 15px;
+    border: none;
+    
+}
+.btn-pagar:hover{
+    background: var(--primary-color);
+}
+.btn-cadastrar:hover{
+    background: var(--primary-color);
+}
+.tituloReceita{
+    display: flex;
+    align-items: center;
+    color: #181717;
+    letter-spacing: 1px;
+}
+.ajustar{                         
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 2% 0 2%;
+    height: 4.5rem;
+}
+.busca{
+    margin-left: 5px;
+    height: 2.2rem;
+    border-radius: 100px;
+    border: none;
+    padding-left: 10px;
+    background: #ebe9e9;
+    vertical-align: middle;
+}
+header:not(nav header){ /*A linha de baixo do Receitas*/
+    background-color: #ffffff;
+    border-radius: 5px 5px 0 0;
+    border-bottom: solid 2px #d87306;
+    width: 100%;
+}
+.btn-relatorio{
+    margin-right: 50px;
+}
+.btn-uteis{
+    font-weight: 500;
+    color: var(--text-color);
+    transition: var(--tran-02);
+    opacity: 1;
+    border-radius: 6px;
+    padding: 5px 15px;
+    font-size: 15px;
+    border: none;
+    margin-right: 50px;
+    background-color: white;
+}
+
+.btn-uteis:hover{
+    background: var(--primary-color);
+}
+.botoes{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.subtitulo{
+    color: #707070;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    padding: auto;
+    padding-bottom: 5px;
+}
+.accordion{ /*fundo do form*/
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    padding: auto;
+    width: 100%;
+    border-radius: 7px;
+}
+.row{
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+.corpo{
+    margin-top: 7px;
+    margin-left: 60px;
+    margin-right: 7px;
+    background-color: white;
+    border-radius: 3px;
+    height: 725px;
+    overflow-y: auto;
+    
+}
+.accordion:hover{
+    background: var(--primary-color);
+}
+.form-label{
+    color: black;
+    padding: 1px;
+    margin: 1px;
+    height: 5px;
+    letter-spacing: 1px;
+    font-weight: 1000%;
+    /*escrita nome, cnpj, etc*/
+}
+#valor{
+    color: black;
+    padding: 1px;
+    margin: 1px;
+    height: 50px;
+    letter-spacing: 1px;
+    font-weight: 1000%;
+}
+#subtitulos{
+    text-indent: 25px;
+    padding: 10px;
+}
+.modal-header{
+    background-color: whitesmoke;
+    
+}
+input[type=number]::-webkit-outer-spin-button, /*escondeu o botão esquisito que permite incrementar ou decrementar*/
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+.accordion-button {
+    background-color: transparent !important;
+    color: #000 !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+    color: #000 !important;
+}
