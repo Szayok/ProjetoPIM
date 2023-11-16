@@ -228,3 +228,15 @@ background-color: #fbeb5c;
 .meses{
     width: 70%;
 }
+
+.rightarrow{
+    position: absolute;
+    right: 5%;
+    bottom: 50%;
+}
+
+.leftarrow{
+    position: absolute;
+    left: 11%;
+    bottom: 50%;
+}

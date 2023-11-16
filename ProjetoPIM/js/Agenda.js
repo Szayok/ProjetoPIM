@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     abrirModal();
     slide_meses();
+    TrocaMes();
 
 });
 
@@ -75,3 +76,16 @@ function slide_meses(){
 
     
 // }
+
+function TrocaMes (){
+    var LeftArrow = Array.from(document.getElementsByClassName("leftarrow"));
+    var Grade = document.getElementById("grade");
+
+    LeftArrow.forEach((LeftArrow) => {
+        LeftArrow.addEventListener("click", function(event){
+            LeftArrow = Grade.style.display = "none";
+            LeftArrow[0] = Grade.style.display = "block";
+        })
+
+    })
+}
