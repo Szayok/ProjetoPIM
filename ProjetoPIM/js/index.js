@@ -1,5 +1,5 @@
- // calendar
-  const daysContainer = document.querySelector(".days"),
+// calendar
+const daysContainer = document.querySelector(".days"),
   nextBtn = document.querySelector(".next-btn"),
   prevBtn = document.querySelector(".prev-btn"),
   month = document.querySelector(".month"),
@@ -33,7 +33,6 @@ let currentYear = date.getFullYear();
 
 // função que renderiza os dias
 function renderCalendar() {
-  // pega o mês passado, o mês atual e o mês seguinte
   date.setDate(1);
   const firstDay = new Date(currentYear, currentMonth, 1);
   const lastDay = new Date(currentYear, currentMonth + 1, 0);
@@ -43,42 +42,40 @@ function renderCalendar() {
   const prevLastDayDate = prevLastDay.getDate();
   const nextDays = 7 - lastDayIndex - 1;
 
-  // atualiza o ano e o mês no header
   month.innerHTML = `${months[currentMonth]} ${currentYear}`;
 
-  // atualiza os dias no html
-  let days = "";
+  let daysHTML = "";
 
-  // dias anteriores html
+  // Dias anteriores
   for (let x = firstDay.getDay(); x > 0; x--) {
-    days += `<div class="day prev">${prevLastDayDate - x + 1}</div>`;
+    const dayId = `${prevLastDayDate - x + 1}-${currentMonth + 1}-${currentYear}`;
+    daysHTML += `<div class="day prev" id="${dayId}">${prevLastDayDate - x + 1}</div>`;
   }
 
   // Dias do mês atual
   for (let i = 1; i <= lastDayDate; i++) {
-    // Checa se é hoje, e
+    const dayId = `${i}-${currentMonth + 1}-${currentYear}`;
     if (
       i === new Date().getDate() &&
       currentMonth === new Date().getMonth() &&
       currentYear === new Date().getFullYear()
     ) {
-      // if date month year matches add today
-      days += `<div class="day today">${i}</div>`;
+      daysHTML += `<div class="day today" onclick="toggleModal(event)" id="${dayId}">${i}</div>`;
     } else {
-      //else dont add today
-      days += `<div class="day ">${i}</div>`;
+      daysHTML += `<div class="day" onclick="toggleModal(event)" id="${dayId}">${i}</div>`;
     }
   }
 
-  // next MOnth days
+  // Próximo mês
   for (let j = 1; j <= nextDays; j++) {
-    days += `<div class="day next">${j}</div>`;
+    const dayId = `${j}-${currentMonth + 2}-${currentYear}`;
+    daysHTML += `<div class="day next" id="${dayId}">${j}</div>`;
   }
 
-  // run this function with every calendar render
   hideTodayBtn();
-  daysContainer.innerHTML = days;
+  daysContainer.innerHTML = daysHTML;
 }
+
 
 renderCalendar();
 
@@ -128,41 +125,74 @@ function hideTodayBtn() {
   }
 }
 
-
-//Modal
-const openModalButton = document.querySelector("#abrir");
-const closeModalButton = document.querySelector("#fechar");
-const modal = document.querySelector("#modal");
-const fade = document.querySelector("#fade");
-const toggleModal = () =>{
-  [modal, fade].forEach((el)=> el.classList.toggle("hide"));
-};
-[openModalButton,closeModalButton, fade].forEach((el) =>{
-  el.addEventListener("click", () =>toggleModal());
-});
-function salvar() {
-  var evento = document.getElementById("event").value;
-  var data = document.getElementById("data").value;
-  var notas = document.getElementById("notes").value;
-  var event = document.getElementById("submit").value;
-
-
-  localStorage.setItem('evento', evento);
-  localStorage.setItem('data', data);
-  localStorage.setItem('notas', notas);
-
-  console.log(localStorage.getItem('evento'));
-  console.log(localStorage.getItem ("data"));
-  console.log(localStorage.getItem ("notas"));
-
-  event.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const eventDate = document.getElementById("eventDate").value;
-    const eventDescription = document.getElementById("eventDescription").value;
-
-    
-  });
-
+function toggleModal(event) {
+  const dayId = event.target.id;
+  const modal = document.getElementById('modal');
+  const fade = document.querySelector("#fade");
+  const modalTitle = document.getElementById("modal_title");
+  const eventLabel = document.getElementById("event");
+  const dateLabel = document.getElementById("data");
+  const notesLabel = document.getElementById("notas");
+  
+  
+  const savedEvent = localStorage.getItem("evento_${dayId}");
+  const savedDate = localStorage.getItem("data_${dayId}");
+  const savedNotes = localStorage.getItem("notas_${dayId}");
+  
+  modalTitle.innerText = `Compromisso do dia ${dayId} :`;
+  eventLabel.innerText = `Evento: ${savedEvent || 'N/A'}`;
+  dateLabel.innerText = `Data: ${savedDate || 'N/A'}`;
+  notesLabel.innerText = `Anotações: ${savedNotes || 'N/A'}`;
+  
+  modal.classList.toggle("hide");
+  fade.classList.toggle("hide");
   
 }
+function fecharModal(){
+  const modal = document.getElementById("modal");
+  modal.classList.add("hide");
+  fade.classList.add("hide");
+}
+
+//Modal
+// const modal = document.querySelector("#modal");
+// const toggleModal = () => {
+//   [modal, fade].forEach((el) => el.classList.toggle("hide"));
+// };
+// [closeModalButton, fade].forEach((el) => {
+//   el.addEventListener("click", () => toggleModal());
+// });
+
+
+// function salvar() {
+//   var evento = localStorage.setItem('evento', evento);
+//   var data =  localStorage.setItem('data', data);
+//   var notas = localStorage.setItem('notas', notas);
+
+//     toggleModal();
+
+
+// }
+// function exibe_evento() {
+//   let savedEvent = localStorage.getItem("evento");
+//   let savedDate = localStorage.getItem("data");
+//   let savedNotes = localStorage.getItem("notas");
+//   const closeModalButton = document.querySelector("#fechar");
+//   const modal = document.querySelector("#modal");
+//   const fade = document.querySelector("#fade");
+//   const toggleModal = () => {
+//     [modal, fade].forEach((el) => el.classList.toggle("hide"));
+//   };
+//   [closeModalButton, fade].forEach((el) => {
+//     el.addEventListener("click", () => toggleModal());
+//   });
+  
+//   document.getElementById("event").innerHTML = "Sem Compromissos para hoje!";
+//   if (savedEvent == undefined) {
+//     console.log(savedEvent);
+//   } else {
+//     document.getElementById("event").innerHTML = "Evento: " + savedEvent;
+//     document.getElementById("data").innerHTML = "Data: " + savedDate;
+//     document.getElementById("notas").innerHTML = "Anotações: " + savedNotes;
+//   }
+// };

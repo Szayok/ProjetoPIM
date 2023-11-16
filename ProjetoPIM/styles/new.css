@@ -3,34 +3,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,100&family=Lato:wght@300;400;700&family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,100&family=Lato:wght@300;400;700&display=swap');
-*{
-    padding: 0;
+
+* {
+    font-family: "Poppins", sans-serif;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
 html {
     height: 100%;
     --text: #33322e;
     --laranja: #fbca00;
 }
+
 /* Styles */
-body{
+body {
     color: var(--text);
     background: linear-gradient(to right top, #d87306, #e78f00, #f2ac00, #fbca00, #ffe800);
 }
-header:not(nav header){
+
+header:not(nav header) {
     background-color: #ffffff;
     border-radius: 5px 5px 0 0;
-    border-bottom: solid 2px #d87306;   
+    border-bottom: solid 2px #d87306;
 }
-.cabecalho{
+
+.cabecalho {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     padding: 0 7% 0 7%;
     height: 4.5rem;
 }
-.alinhamento input{
+
+.alinhamento input {
     margin-left: 5px;
     height: 2.2rem;
     border-radius: 100px;
@@ -39,7 +46,8 @@ header:not(nav header){
     background: #ebe9e9;
     vertical-align: middle;
 }
-.alinhamento{
+
+.alinhamento {
     display: flex;
     align-items: center;
     /* color: #555454; */
@@ -47,50 +55,61 @@ header:not(nav header){
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 1px;
 }
-h1{
+
+h1 {
     margin-bottom: 0 !important;
 }
 
-.conteudo{
+.conteudo {
     background: #ffffff;
     border: none;
     border-radius: 5px;
     height: 95vh;
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem 1rem 1rem 4rem;
 }
-.container{
+
+.container {
     padding: 2% 0 0 0 !important;
 }
+
 .fixTableHead {
     overflow-y: auto;
     height: 70vh;
 }
+
 .fixTableHead thead th {
     position: sticky;
     top: 0;
 }
-.table{
+
+.table {
     font-family: 'Lato', sans-serif !important;
     text-align: center;
 }
-td, th{
+
+td,
+th {
     vertical-align: middle;
 }
+
 td a {
     color: var(--text);
     text-decoration: none;
 }
-caption{
+
+caption {
     text-align: center;
 }
-.bi-person-plus-fill{
+
+.bi-person-plus-fill {
     color: var(--text);
     font-size: 22px;
 }
-.posicao{
-  position: fixed;
-  bottom: 4%;
-  right: 4%;
+
+.posicao {
+    position: fixed;
+    bottom: 4%;
+    right: 4%;
 }
 
 /* modal */
@@ -101,19 +120,22 @@ caption{
     z-index: 1;
     left: 0;
     top: 0;
-    width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
 }
 
 .modal-content {
+    display: block;
     background-color: #fefefe;
-    margin: 15% auto;
+    margin-top: 5%;
+    margin-left: 10%;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    height: 75%;
 }
 
 .closeModal {
@@ -123,7 +145,8 @@ caption{
     font-weight: bold;
 }
 
-.closeModal:hover, .closeModal:focus {
+.closeModal:hover,
+.closeModal:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -135,17 +158,104 @@ caption{
     z-index: 1;
     left: 0;
     top: 0;
-    width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
 }
 
 .add-modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin-top: 5%;
+    margin-left: 10%;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    height: 75%;
+}
+
+.modal-header {
+    align-items: baseline !important;
+}
+
+.rua {
+    width: 600px;
+}
+
+.num {
+    margin-left: 10%;
+    padding-left: 10%;
+}
+
+.modalAnexos {
+    display: none;
+}
+
+.mod-botao {
+    border-color: #fbca00;
+    background-color: #fbca00;
+    width: 110px;
+    border-radius: 15px;
+}
+
+input[type="text"],
+select,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    color: black;
+}
+
+.name {
+    width: 100%;
+}
+
+.doc-rua {
+    margin-right: 80px;
+    width: 100%;
+}
+
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.confirmar {
+    position: fixed;
+    right: 12%;
+    bottom: 18%;
+    color: var(--text);
+    font-size: 22px;
+}
+
+.editar {
+    position: fixed;
+    right: 12%;
+    bottom: 18%;
+    color: var(--text);
+    font-size: 22px;
+}
+
+.aceitar {
+    display: none;
+    position: fixed;
+    right: 20%;
+    bottom: 18%;
+    color: var(--text);
+    font-size: 22px;
 }

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SolarG</title>
-  <link rel="stylesheet" href="../styles/financeiro.css">
+  <link rel="stylesheet" href="../styles/receitas.css">
   <link rel="stylesheet" href="../styles/sidebar.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="icon" href="/imagens/SolarLogo_white.jpeg" type="imag/x-icon">
@@ -18,7 +18,7 @@
   <script src="https://cdn.plot.ly/plotly-2.26.0.min.js" charset="utf-8"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+  <script src="../js/receitas.js"></script>
 </head>
 
 <body style="background-color: orange;">
@@ -42,64 +42,60 @@
             </li>
             <ul class="menu-links">
               <li class="nav-link">
-                <a href="/Pages/Index.html">
+                <a href="Index.html">
                   <i class="bx bx-home icon"></i>
                   <span class="text nav-text">Inicio</span>
                 </a>
               </li>
               <li class="nav-link">
-                <a href="/Pages/contatos.html">
+                <a href="contatos.html">
                   <i class="bx bx-phone icon"></i>
                   <span class="text nav-text">Contatos ></span>
                 </a>
                 <ul class="sub-menu">
                   <li class="nav-link">
-                    <a href="/Pages/contatos.html" class="submenu-link">
-                      <i class="bx bx-male"></i>
+                    <a href="../Pages/contatos.html">
                       <span class="text nav-text">Clientes</span>
                     </a>
                   </li>
                   <li class="nav-link">
-                    <a href="/Pages/contatos.html" class="submenu-link">
-                      <i class="bx bx-buildings"></i>
+                    <a href="contatos.html">
                       <span class="text nav-text">Empresas</span>
                     </a>
                   </li>
                 </ul>
               </li>
               <li class="nav-link">
-                <a href="/Pages/agenda.html">
+                <a href="agenda.html">
                   <i class="bx bx-book-content icon"></i>
                   <span class="text nav-text">Agenda</span>
                 </a>
               </li>
               <li class="nav-link">
-                <a href="/Pages/fornecedores.html">
+                <a href="fornecedores.html">
                   <i class="bx bx-briefcase icon"></i>
                   <span class="text nav-text">Fornecedores</span>
                 </a>
               </li>
               <li class="nav-link">
-                <a href="/Pages/processos.html">
+                <a href="processos.html">
                   <i class="bx bx-pie-chart icon"></i>
                   <span class="text nav-text">Processos</span>
                 </a>
               </li>
               <li class="nav-link">
-                <a href="/Pages/financeiro.html">
+                <a href="financeiro.html">
                   <i class=" bx bx-bar-chart icon"></i>
                   <span class="text nav-text">Financeiro > </span>
                 </a>
                 <ul class="sub-menu">
                   <li class="nav-link">
-                    <a href="/Pages/despesas.html" class="submenu-link">
-                      <i class="bx bx-bar-chart-square"></i>
+                    <a href="despesas.html">
                       <span class="text nav-text">Despesas</span>
                     </a>
                   </li>
                   <li class="nav-link">
-                    <a href="/Pages/receitas.html" class="submenu-link">
-                      <i class="bx bx-receipt"></i>
+                    <a href="receitas.html">
                       <span class="text nav-text">Receitas</span>
                     </a>
                   </li>
@@ -109,16 +105,160 @@
           </div>
           <div class="log-out">
             <li>
-              <a href="/Pages/login.html">
+              <a href="login.html">
                 <i class="bx bx-log-out icon"></i>
                 <span class="text nav-text">Logout</span>
               </a>
             </li>
           </div>
         </div>
-    </nav>
+      </nav>
   <script src="../js/index.js"></script>
   <script src="../js/sidebar.js"></script>
+
+    
+  <div>
+    <div class="corpo">
+      <header>
+        <div class="ajustar">
+          <div class="tituloReceita">
+            <h1>Receitas</h1>
+          </div>
+          <div>
+            <input type="text" class="busca" id="pesquisa" placeholder="Pesquisar...">
+          </div>
+        </div>
+      </header>
+        <div class="row">
+            <div class="col-md-6"> <!--Limita o tamanho do accordion-->
+                <div class="accordion" id="accordionExample1">
+                    <!--<h1 class="subtitulo" id="subtitulos">Despesas</h1> ONDE ESTAVA ESCRITO RECEITAS E TEM HOVER-->           <!--ACCORDION DESPESA-->
+                    <div class="accordion-item" id="accordionItem">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseDespesa"
+                                aria-expanded="false" aria-controls="collapseDespesa">
+                                Maria
+                            </button>
+                        <div id="collapseDespesa" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="mb-3">
+                                    <label class="form-label">Nome</label>
+                                    <input class="form-control" value="Eletromil" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Documento</label>
+                                    <input class="form-control" value="41.306.779/0001-55" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Valor</label>
+                                    <input class="form-control" value="R$5.500,00" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Vencimento</label>
+                                    <input class="form-control" value="31/10/2023" readonly>
+                                    <button type="button" class="btn-pagar" id="botaoPagar">Receber</button>
+                                    <button type="button" class="btn-pagar" id="editar">Anexo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--ACCORDION Despesa 1-->
+                    <div class="accordion-item"> 
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseDespOne"
+                                aria-expanded="false" aria-controls="collapseDespOne">
+                                João
+                            </button>
+                        <div id="collapseDespOne" class="accordion-collapse collapse"> 
+                            <div class="accordion-body">
+                                <div class="mb-3">
+                                    <label class="form-label">Nome</label>
+                                    <input class="form-control" value="Enerluz" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Documento</label>
+                                    <input class="form-control" value="41.306.779/0001-55" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Valor</label>
+                                    <input class="form-control" value="R$5.500,00" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Vencimento</label>
+                                    <input class="form-control" value="31/10/2023" readonly>
+                                    <button type="button" class="btn-pagar" id="botaoPagar">Receber</button>
+                                    <button type="button" class="btn-pagar" id="editar">Anexo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <!--MODAL-->
+        <div class="botoes">
+          <button type="button" class="btn-uteis">Relatório</button>
+          <button type="button" class="btn-uteis" data-bs-toggle="modal" data-bs-target="#novo">Cadastrar</button>
+      </div>
+  <div class="modal fade" id="novo" tabindex="-1">
+      <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Cadastrar</h4>
+              <button type="button" class="btn-cadastrar" data-bs-dismiss="modal">&times</button>
+            </div>
+            <!-- Corpo do modal -->
+            <div class="modal-body">
+              <div >
+                  <div class="accordion-body">
+                      <div class="mb-3">
+                          <label for="exampleFormControlInput1" class="form-label">Nome:</label>
+                          <input class="form-control" placeholder="Nome cadastral" id="exampleFormControlInput1">
+                          <div class="mb-3">
+                              <label for="documento" class="form-label">Documento:</label>
+                              <input class="form-control" placeholder="CPF ou CNPJ" type="number">                
+                          </div>
+                          <div class="mb-3">
+                              <label for="valor" class="form-label">Valor R&#36;:</label>
+                              <input class="form-control" type="number" placeholder="R&#36;" id="valor" name="valor">
+                          </div>
+                          <div>
+                              <label for="exampleFormControlTextarea1" class="form-label">Vencimento:</label>
+                              <input class="form-control" placeholder="00/00/0000" type="number">
+                          </div>
+                          <div class="mb-3">
+                              <label for="exampleFormControlTextarea1" class="form-label">Observações:</label>
+                              <textarea class="form-control"> </textarea>
+                          </div>
+                          <br>
+                          <button type="button" class="btn-cadastrar">Anexo</button>
+                        </div>
+                  </div>
+                </div>
+            </div>
+            <!-- Rodapé do modal-->
+            <div class="modal-footer">
+                  <button type="button" class="btn-cadastrar"  id="salvar" onclick="createSection()">Salvar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+<!--MODAL 2-->
+<div class="modal fade" id="modalMensagem" tabindex="-1" aria-labelledby="modalMensagemLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalMensagemLabel"></h5> <!--SEM CABEÇALHO-->
+              <button type="button" class="btn-cadastrar" data-bs-dismiss="modal" aria-label="Fechar">&times</button>
+          </div>
+          <div class="modal-body">
+              <h5>Cadastrado com sucesso!</h5>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn-cadastrar" data-bs-dismiss="modal">Fechar</button>
+          </div>
+      </div>
+  </div>
+</div>
+
 
 </body>
 

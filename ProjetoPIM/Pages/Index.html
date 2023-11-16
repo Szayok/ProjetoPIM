@@ -40,64 +40,60 @@
             </li>
             <ul class="menu-links">
               <li class="nav-link">
-                <a href="/Pages/Index.html">
+                <a href="Index.html">
                   <i class="bx bx-home icon"></i>
                   <span class="text nav-text">Inicio</span>
                 </a>
               </li>
               <li class="nav-link">
-                <a href="/Pages/contatos.html">
+                <a href="contatos.html">
                   <i class="bx bx-phone icon"></i>
                   <span class="text nav-text">Contatos ></span>
                 </a>
                 <ul class="sub-menu">
                   <li class="nav-link">
-                    <a href="/Pages/contatos.html" class="submenu-link">
-                      <i class="bx bx-male"></i>
+                    <a href="../Pages/contatos.html">
                       <span class="text nav-text">Clientes</span>
                     </a>
                   </li>
                   <li class="nav-link">
-                    <a href="/Pages/contatos.html" class="submenu-link">
-                      <i class="bx bx-buildings"></i>
+                    <a href="contatos.html">
                       <span class="text nav-text">Empresas</span>
                     </a>
                   </li>
                 </ul>
               </li>
               <li class="nav-link">
-                <a href="/Pages/agenda.html">
+                <a href="agenda.html">
                   <i class="bx bx-book-content icon"></i>
                   <span class="text nav-text">Agenda</span>
                 </a>
               </li>
               <li class="nav-link">
-                <a href="/Pages/fornecedores.html">
+                <a href="fornecedores.html">
                   <i class="bx bx-briefcase icon"></i>
                   <span class="text nav-text">Fornecedores</span>
                 </a>
               </li>
               <li class="nav-link">
-                <a href="/Pages/processos.html">
+                <a href="processos.html">
                   <i class="bx bx-pie-chart icon"></i>
                   <span class="text nav-text">Processos</span>
                 </a>
               </li>
               <li class="nav-link">
-                <a href="/Pages/financeiro.html">
+                <a href="financeiro.html">
                   <i class=" bx bx-bar-chart icon"></i>
                   <span class="text nav-text">Financeiro > </span>
                 </a>
                 <ul class="sub-menu">
                   <li class="nav-link">
-                    <a href="/Pages/despesas.html" class="submenu-link">
-                      <i class="bx bx-bar-chart-square"></i>
+                    <a href="despesas.html">
                       <span class="text nav-text">Despesas</span>
                     </a>
                   </li>
                   <li class="nav-link">
-                    <a href="/Pages/receitas.html" class="submenu-link">
-                      <i class="bx bx-receipt"></i>
+                    <a href="receitas.html">
                       <span class="text nav-text">Receitas</span>
                     </a>
                   </li>
@@ -107,7 +103,7 @@
           </div>
           <div class="log-out">
             <li>
-              <a href="/Pages/login.html">
+              <a href="login.html">
                 <i class="bx bx-log-out icon"></i>
                 <span class="text nav-text">Logout</span>
               </a>
@@ -166,12 +162,9 @@
               <div class="day">Sex</div>
               <div class="day">Sab</div>
             </div>
-            <div class="days" onclick="toggleModal()">
+            <div class="days">
               <!-- lets add days using js -->
             </div><br>
-            <button id="abrir">
-              Adicionar evento
-            </button>
           </div>
         </div>
       </div>
@@ -180,28 +173,27 @@
     <div id="modal" class="hide">
       <div class="modal-header">
         <header>
-          <h2 id="modal_title">Adicionar evento</h2>
+          <h2 id="modal_title"></h2>
         </header>
-        <button id="fechar">X</button>
+        <button id="fechar" onclick="fecharModal()">X</button>
       </div>
       <div class="modal-body">
         <form name="calendario">
-          <label for="event"></label>
-          Evento:
-          </label>
-          <input type="text" id="event" name="event"><br><br>
-          <label for="data">Data : </label>
-          <input type="date" name="data" id="data" required><br><br>
-          <label for="notes">
-            Anotações:
+          <label for="event" id="event">
+            Evento:
           </label><br>
-          <textarea id="notes"></textarea><br><br>
+
+          <label for="data" id="data">
+
+          </label><br>
+
+          <label for="notas" id="notas">
+
+          </label><br>
+
 
         </form>
-        <div class="modal-footer">
-          <button id="save" type="submit" onclick="salvar()">Salvar</button>
-
-        </div>
+        <div class="modal-footer"></div>
         <div class="modal-content" style="background-color: white;">
         </div>
       </div>
