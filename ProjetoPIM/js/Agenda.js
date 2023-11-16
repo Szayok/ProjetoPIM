@@ -6,7 +6,8 @@ const janeiro = document.getElementById("grade");
 var seletor = document.getElementById("fonte");
 var mes = document.getElementsByClassName("meses");
 var manualbtn = document.getElementsByClassName("manualbtn");  
-
+var Grade = document.getElementById("grade");
+var cont = 0;
 
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -18,11 +19,13 @@ document.addEventListener("DOMContentLoaded", function(){
             modal.style.display="none";
         }
     });
-
+    
     abrirModal();
     slide_meses();
     TrocaMes();
-
+    VoltaMes();
+    
+    
 });
 
 function abrirModal(){
@@ -78,15 +81,27 @@ function slide_meses(){
     
 // }
 
-function TrocaMes (){
+function VoltaMes (){
     var LeftArrow = Array.from(document.getElementsByClassName("leftarrow"));
-    var Grade = document.getElementById("grade");
 
     LeftArrow.forEach((LeftArrow) => {
-        LeftArrow.addEventListener("click", function(event){
-            LeftArrow = Grade.style.display = "none";
-            LeftArrow[0] = Grade.style.display = "block";
-        })
-
+            LeftArrow.addEventListener("click", function(event){
+                LeftArrow = Grade.style.display = "none";
+                LeftArrow[cont] = Grade.style.display = "block";
+                console.log(cont);
+            })
     })
 }
+
+function TrocaMes (){
+    var RightArrow = Array.from(document.getElementsByClassName("rightarrow"));
+
+        RightArrow.forEach((RightArrow) => {
+            RightArrow.addEventListener("click", function(event){
+                RightArrow = Grade.style.display = "none";
+                RightArrow[cont] = Grade.style.display = "block";
+                cont --;
+                console.log(cont);
+            })
+        })
+}   
