@@ -106,6 +106,7 @@ function criarTabela(pessoas) {
 
   icone.className = "bi bi-trash";
   button.className = "btn btn-danger";
+  button.id = "p"+pos;
   button.appendChild(icone);
 
   td.appendChild(button);
