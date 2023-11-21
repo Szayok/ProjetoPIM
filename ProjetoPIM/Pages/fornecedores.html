@@ -1,133 +1,242 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SolarG</title>
-        <link rel="stylesheet" href="../styles/sidebar.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="icon" href="/imagens/SolarLogo_black.jpeg" type="imag/x-icon">
-        <link rel="shortcut icon" href="../imagens/SolarLogo_black.jpeg" type="image/x-icon">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-        <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      
-      
-      </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fornecedores</title>
+  <link rel="icon" href="../imagens/solar-panel.png" type="imag/x-icon">
+  <link rel="shortcut icon" href="../imagens/solar-panel.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" href="/imagens/solar-panel.png" type="imag/x-icon">
+  <link rel="shortcut icon" href="../imagens/solar-panel.png" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="../styles/sidebar.css">
+  <link rel="stylesheet" href="../styles/new.css">
+</head>
+
 <body>
-  <nav class="sidebar close">
+  <div class="conteudo content">
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="../imagens/SolarLogo_white.jpeg" alt="Logo_SolarG" />
+          </span>
+        </div>
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+      <div class="menu-bar">
+        <div class="menu">
+          <li class="search-box">
+            <i class="bx bx-search icon"></i>
+            <input type="search" placeholder="Pesquisar...">
+          </li>
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="Index.html">
+                <i class="bx bx-home icon"></i>
+                <span class="text nav-text">Inicio</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="contatos.html">
+                <i class="bx bx-phone icon"></i>
+                <span class="text nav-text">Contatos ></span>
+              </a>
+              <ul class="sub-menu">
+                <li class="nav-link">
+                  <a href="../Pages/contatos.html">
+                    <span class="text nav-text">Clientes</span>
+                  </a>
+                </li>
+                <li class="nav-link">
+                  <a href="fornecedores.html">
+                    <span class="text nav-text">Fornecedores</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-link">
+              <a href="agenda.html">
+                <i class="bx bx-book-content icon"></i>
+                <span class="text nav-text">Agenda</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="fornecedores.html">
+                <i class="bx bx-briefcase icon"></i>
+                <span class="text nav-text">Fornecedores</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="processos.html">
+                <i class="bx bx-pie-chart icon"></i>
+                <span class="text nav-text">Processos</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="financeiro.html">
+                <i class=" bx bx-bar-chart icon"></i>
+                <span class="text nav-text">Financeiro > </span>
+              </a>
+              <ul class="sub-menu">
+                <li class="nav-link">
+                  <a href="despesas.html">
+                    <span class="text nav-text">Despesas</span>
+                  </a>
+                </li>
+                <li class="nav-link">
+                  <a href="receitas.html">
+                    <span class="text nav-text">Receitas</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="log-out">
+          <li>
+            <a href="login.html">
+              <i class="bx bx-log-out icon"></i>
+              <span class="text nav-text">Logout</span>
+            </a>
+          </li>
+        </div>
+      </div>
+    </nav>
+
     <header>
-      <div class="image-text">
-        <span class="image">
-          <img src="../imagens/SolarLogo_white.jpeg" alt="Logo_SolarG" />
-        </span>
+      <div class="cabecalho">
+        <div class="alinhamento">
+          <h1>Fornecedores</h1>
+        </div>
+        <div class="alinhamento">
+          <input type="search" class="pesquisa" id="procura" placeholder="Pesquisar..." onkeyup="busca()">
+        </div>
       </div>
-      <i class="bx bx-chevron-right toggle"></i>
     </header>
-    <div class="menu-bar">
-      <div class="menu">
-        <li class="search-box">
-          <i class="bx bx-search icon"></i>
-          <input type="search" placeholder="Pesquisar...">
-        </li>
-        <ul class="menu-links">
-          <li class="nav-link">
-            <a href="Index.html">
-              <i class="bx bx-home icon"></i>
-              <span class="text nav-text">Inicio</span>
-            </a>
-          </li>
-          <li class="nav-link">
-            <a href="contatos.html">
-              <i class="bx bx-phone icon"></i>
-              <span class="text nav-text">Contatos ></span>
-            </a>
-            <ul class="sub-menu">
-              <li class="nav-link">
-                <a href="../Pages/contatos.html">
-                  <span class="text nav-text">Clientes</span>
-                </a>
-              </li>
-              <li class="nav-link">
-                <a href="contatos.html">
-                  <span class="text nav-text">Empresas</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-link">
-            <a href="agenda.html">
-              <i class="bx bx-book-content icon"></i>
-              <span class="text nav-text">Agenda</span>
-            </a>
-          </li>
-          <li class="nav-link">
-            <a href="fornecedores.html">
-              <i class="bx bx-briefcase icon"></i>
-              <span class="text nav-text">Fornecedores</span>
-            </a>
-          </li>
-          <li class="nav-link">
-            <a href="processos.html">
-              <i class="bx bx-pie-chart icon"></i>
-              <span class="text nav-text">Processos</span>
-            </a>
-          </li>
-          <li class="nav-link">
-            <a href="financeiro.html">
-              <i class=" bx bx-bar-chart icon"></i>
-              <span class="text nav-text">Financeiro > </span>
-            </a>
-            <ul class="sub-menu">
-              <li class="nav-link">
-                <a href="despesas.html">
-                  <span class="text nav-text">Despesas</span>
-                </a>
-              </li>
-              <li class="nav-link">
-                <a href="receitas.html">
-                  <span class="text nav-text">Receitas</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+    <main class="container">
+      <div class="fixTableHead">
+        <table class="table table-striped caption-top" id="table">
+          <caption><b>Fornecedores Cadastrados</b></caption>
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Remover</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
       </div>
-      <div class="log-out">
-        <li>
-          <a href="login.html">
-            <i class="bx bx-log-out icon"></i>
-            <span class="text nav-text">Logout</span>
-          </a>
-        </li>
+      <div class="posicao">
+        <button type="button" id="adicionar" class="btn btn-warning" onclick="abrirModal()"><i class="bi bi-person-plus-fill"></i></button>
+      </div>
+    </main>
+
+    <!-- Content Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-content">
+        <span class="fechar" id="closemod" style="padding-right: 10px;">&times;</span>
+        <h2 style="padding-left: 12px;" , id="titulo">Nome</h2>
+        <button class="mod-botao" id="modalDados">Dados</button>
+        <button class="mod-botao" style="margin-left: 8px;" id="modalAnexos">Anexos</button>
+        <button class="mod-botao" style="margin-left: 8px;" id="modalAnotacoes">Anotações</button>
+        <br><br>
+        <div class="modal-section" id="modalDados">
+          <label>Nome</label>
+          <input disabled type="text" class="name" id="mudarNome" name="firstname">
+          <div style="display: flex;">
+            <div style="display: block;">
+              <label>CPF/CNPJ</label>
+              <br>
+              <input disabled type="text" class="documento" id="mudarCPF" name="numdocs">
+            </div>
+            <div style="margin-left: 40px;">
+              <label>Mei</label>
+              <br>
+              <input disabled type="text" class="documento" id="mudarMei" name="numdocs">
+            </div>
+          </div>
+          <div style="display: flex;">
+            <div style="display: block;">
+              <label>Rua</label>
+              <br>
+              <input disabled type="text" class="rua" id="mudarRua" name="numdocs">
+            </div>
+            <div>
+              <label>Nº</label>
+              <br>
+              <input disabled type="text" class="num" id="mudarNumero" name="numdocs">
+            </div>
+          </div>
+        </div>
+        <button onclick="editar()" class="editar btn btn-warning">Editar</button>
+        <button onclick="aceitar()" class="aceitar btn btn-warning" id="aceitar">aceitar</button>
       </div>
     </div>
-  </nav>
 
+    <!-- Add modal -->
+    <div class="add-modal" id="addModal">
+      <div class="add-modal-content">
+        <span class="fechar" id="closemod" style="padding-right: 10px;">&times;</span>
+        <h2 style="padding-left: 12px;">Novo Cadastro</h2>
+        <button class="mod-botao" id="modalDados">Dados</button>
+        <button class="mod-botao" style="margin-left: 8px;" id="modalAnexos">Anexos</button>
+        <button class="mod-botao" style="margin-left: 8px;" id="modalAnotacoes">Anotações</button>
+        <br><br>
+        <div class="modal-section" id="modalDados">
+          <label>Nome da Empresa</label>
+          <input type="text" class="name" id="nome" name="firstname">
+          <div style="display: flex;">
+            <div style="display: block;">
+              <label>CPF/CNPJ</label>
+              <br>
+              <input type="text" class="documento" id="cpf" name="numdocs">
+            </div>
+            <div style="margin-left: 40px;">
+              <label>MEI</label>
+              <br>
+              <input type="text" class="documento" id="mei" name="numdocs">
+            </div>
+          </div>
+          <div style="display: flex;">
+            <div style="display: block;">
+              <label>Rua</label>
+              <br>
+              <input type="text" class="rua" id="rua" name="numdocs">
+            </div>
+            <div>
+              <label>Nº</label>
+              <br>
+              <input type="text" class="num" id="numero" name="numdocs">
+            </div>
+          </div>
+        </div>
 
+        <div class="modalAnexos" id="modalAnexos">
+          <label for="file">Anexar Documento</label>
+          <input type="file" id="file">
+        </div>
+        <button onclick="armazenar()" class="confirmar btn btn-warning">confirmar</button>
+      </div>
+    </div>
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <script src="../js/sidebar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+  <script src="../js/fornecedores.js"></script>
+  <script src="../js/sidebar.js"></script>
 </body>
+
 </html>
