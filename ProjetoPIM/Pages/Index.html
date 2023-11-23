@@ -19,11 +19,11 @@
 
 </head>
 
-<body style="background-color: orange;">
+<body>
   <div class="background">
     <div class="content">
 
-      <nav class="sidebar close">
+      <nav class="sidebar close" style="border-right: 5px solid #fbca00;">
         <header>
           <div class="image-text">
             <span class="image">
@@ -111,33 +111,71 @@
           </div>
         </div>
       </nav>
-      <div style="margin-top: 2%;">
-        <div class="container">
-          <div class="grafico">
-            <canvas id="myChart" style="display: flex;">
-              <script>
-                const ctx = document.getElementById('myChart');
-                new Chart(ctx, {
-                  type: 'pie',
-                  data: {
-                    labels: ['Em mapeamento', 'Pendentes', 'Análise', 'Instalação', 'Concluido',],
-                    datasets: [{
-                      label: '# of Votes',
-                      data: [12, 19, 5, 2, 3],
-                      borderWidth: 1
-                    }]
-                  },
-                  options: {
-                    scales: {
-                      y: {
-                        beginAtZero: true
-                      }
+      <div class="container" >
+
+        <div class="grafico">
+          <canvas id="myChart" style="display: flex;">
+            <script>
+              const ctx = document.getElementById('myChart');
+              new Chart(ctx, {
+                type: 'pie',
+                data: {
+                  labels: ['Em mapeamento', 'Pendentes', 'Análise', 'Instalação', 'Concluido',],
+                  datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 5, 2, 3],
+                    borderWidth: 1
+                  }]
+                },
+                options: {
+                  scales: {
+                    y: {
+                      beginAtZero: true
                     }
                   }
-                });
-              </script>
-            </canvas>
+                }
+              });
+            </script>
+          </canvas>
+        </div>
+
+        <section class="agendamentos">
+          <h3>Próximos Agendamentos</h3> <br>
+          <div class="cards_agendamentos">
+            <h4>23/11</h4>
+            <div>
+              <img src="https://pbs.twimg.com/media/EVA7xYxXkAAkQ7T.jpg" height="40" width="40" alt="">
+              <div style="display: block;">
+                <h5>Matheus Paulo</h5>
+                <p>Instalação de Placa</p>
+              </div>
+                
+            </div>
           </div>
+            <div class="cards_agendamentos">
+              <h4>24/11</h4>
+              <div>
+                <img src="https://pbs.twimg.com/profile_images/1252072982492729345/60Joicv2_400x400.jpg" height="40" width="40" alt="">
+                <div style="display: block;">
+                  <h5>Jair Paulo</h5>
+                  <p>Manutenção Sistema</p>
+                </div>
+                  
+              </div>
+            </div>
+            <div class="cards_agendamentos">
+              <h4>28/11</h4>
+              <div>
+                <img src="https://pbs.twimg.com/profile_images/1122519925455818758/WW8UKXm7_400x400.jpg" height="40" width="40" alt="">
+                <div style="display: block;">
+                  <h5>Nando Paulo</h5>
+                  <p>Devolução</p>
+                </div>
+                  
+              </div>
+            </div>
+          </section> <br>
+          
           <div class="calendar">
             <div class="header">
               <div class="month"></div>
@@ -167,6 +205,8 @@
             </div><br>
           </div>
         </div>
+
+
       </div>
     </div>
     <div id="fade" class="hide"></div>
