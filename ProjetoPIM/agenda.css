@@ -51,7 +51,7 @@ html, body {
 }
 
 .dashboard i:hover{
-background-color: #fbeb5c;
+    background-color: #fbeb5c;
 }
 
 .dashboard a {
@@ -74,7 +74,7 @@ background-color: #fbeb5c;
     background-color: #ffffff;
     border-radius: 2%;
     align-content: center;
-
+    
 }
 
 .grade,.grade2,.grade3,.grade4{
@@ -205,7 +205,8 @@ background-color: #fbeb5c;
     right: 27%;
     bottom: 10%;
 }
-.manualbtn{
+/* .manualbtn{
+    display: none;
     border: 0px solid rgba(255, 255, 255, 0);
     width: 3%;
     height: 8%;
@@ -214,7 +215,49 @@ background-color: #fbeb5c;
     border-radius: 10px;    
     cursor: pointer;
     transition: 1s;
+} */
+
+.wrapper{
+    position: absolute;
+    top: 20%;
+    left: 31%;
+    width: 50%;
+    height: 60%;
+    display: inline-grid;
+    grid-template-columns: 90px 90px 90px 90px 90px 90px 90px;
+    font-family: Akshar;
+    transition: 1s;
 }
 
+.home p{
+    display: flex;
+    align-self:first center;
+    left: 48.5%;
+    top: 10%;
+    font-size: larger;
+}
 
+.leftarrow{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    position: absolute;
+    left: 17%;
+    top: 46%;
+}
 
+.rightarrow{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    position: absolute;
+    right: 14%;
+    top: 46%;
+
+}
+
+#texto{ 
+    position: absolute;
+    top: 10%;
+    left: 31%;
+}

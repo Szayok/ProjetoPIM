@@ -23,6 +23,7 @@
     --tran-08: all 0.8s ease;
 }
 .sidebar{
+    box-shadow: 0px 7px 7px #707070;
     position: fixed;
     top: 0;
     left: 0;

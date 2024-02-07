@@ -1,107 +1,134 @@
-const modal = document.getElementById("modal");
-const fecha = document.getElementById("xis");
-const dias = document.getElementById("dia");
-const botao1 = document.getElementById("radio1");
-const janeiro = document.getElementById("grade");
-var seletor = document.getElementById("fonte");
-var mes = document.getElementsByClassName("meses");
-var manualbtn = document.getElementsByClassName("manualbtn");  
+var button = document.getElementsByClassName("botao");
+const dias = document.getElementById("dia"); 
 var Grade = document.getElementById("grade");
 var cont = 0;
-
+var data = new Date();
+let Ano = data.getFullYear()
+var Mes = data.getMonth()
+var Dia = 0;
+var RightArrow = document.getElementById("ra");
+var LeftArrow = document.getElementById("la");
+var Grid = document.querySelector(".wrapper");
 
 document.addEventListener("DOMContentLoaded", function(){
-    fecha.addEventListener("click", function(event){
-        modal.style.display="none";
-    });
+    // fecha.addEventListener("click", function(event){    
+    //     modal.style.display="none";
+    // });
     window.addEventListener("click", function(event){
         if(event.target == modal){
             modal.style.display="none";
         }
     });
+   
+    TrocaMes(Mes);
+    RightArrow.addEventListener("click", function(event){
+        Mes++;
+        if (Mes == 12) {
+            Ano++;
+            Mes = 0;
+        }
+        console.log(Mes);
+        TrocaMes(Mes);
+    });
     
-    abrirModal();
-    slide_meses();
-    TrocaMes();
-    VoltaMes();
-    
+    LeftArrow.addEventListener("click", function(event){
+        Mes--;
+        if (Mes < 0) {
+            Ano--;
+            Mes = 11;
+        }
+        TrocaMes(Mes);
+    });
+
     
 });
 
-function abrirModal(){
-    var button = Array.from(document.getElementsByClassName("botao"));
-
-    
-    button.forEach((botao) => {
-        botao.addEventListener("click", function(event){
-            modal.style.display = "block";
-
-
-            var pos = botao.id;
-            
-            document.getElementById("mudarDia").innerHTML = pos;
-        });
-        
-    });
-    
-}
-
-function slide_meses(){ 
-    var label = Array.from(document.getElementsByClassName("manualbtn"));
-    var Mes = manualbtn.id;
-
-    label.forEach((manualbtn) => {
-        manualbtn.addEventListener("click", function(event){
-            janeiro.style.display = "block";
-            document.getElementById("mudarMes").innerHTML = manualbtn.id;
-        });
-    });
-}
-
-// function slide_meses(){
-//     var select = document.querySelector('#fonte');
-//     optionValue = select.options[select.selectedIndex];
-
-//     let value = optionValue.value;
-    
-//     switch(value){
-//         case 'Janeiro':
-//             janeiro.style.display = "block"; 
-//             break;
-//         case 'mes':
-//             janeiro.style.display = "block";
-//             break;
-//         case 'semana':
-//             janeiro.style.display = "block";
-//             break; 
-//         default:
-//             janeiro.style.display = "none";
-//     } 
-
-    
-// }
-
-function VoltaMes (){
-    var LeftArrow = Array.from(document.getElementsByClassName("leftarrow"));
-
-    LeftArrow.forEach((LeftArrow) => {
-            LeftArrow.addEventListener("click", function(event){
-                LeftArrow = Grade.style.display = "none";
-                LeftArrow[cont] = Grade.style.display = "block";
-                console.log(cont);
-            })
-    })
-}
-
 function TrocaMes (){
-    var RightArrow = Array.from(document.getElementsByClassName("rightarrow"));
-
-        RightArrow.forEach((RightArrow) => {
-            RightArrow.addEventListener("click", function(event){
-                RightArrow = Grade.style.display = "none";
-                RightArrow[cont] = Grade.style.display = "block";
-                cont --;
-                console.log(cont);
-            })
-        })
+    var mes = document.getElementById("texto");
+    var ano = data.getFullYear();
+    var i = 1;
+        switch (Mes){
+            case 0:
+                Dia = 30;
+                ImprimeDia(Dia);
+                mes.textContent = "janeiro";
+                break;
+            case 1: 
+                if (Ano % 4 != 0) {
+                    Dia = 27;
+                } else if (Ano % 100 != 0) {
+                    Dia = 28;
+                } else if (Ano % 400 == 0) {
+                    Dia = 28;
+                } else {
+                    Dia = 27;
+                }
+                ImprimeDia(Dia);
+                mes.textContent = "Fevereiro";
+                break;
+            case 2: 
+                Dia = 30;
+                ImprimeDia(Dia);
+                mes.textContent = "Março";
+                break;
+            case 3: 
+                Dia = 29;
+                ImprimeDia(Dia);
+                mes.textContent = "Abril";
+                break;
+            case 4: 
+                Dia = 30;
+                ImprimeDia(Dia);
+                mes.textContent = "Maio";
+                break;
+            case 5: 
+                Dia = 29;
+                ImprimeDia(Dia);
+                mes.textContent = "Junho";
+                break;
+            case 6: 
+                Dia = 30;
+                ImprimeDia(Dia);
+                mes.textContent = "Julho";
+                break;
+            case 7: 
+                Dia = 30;
+                ImprimeDia(Dia);
+                mes.textContent = "Agosto";
+                break;
+            case 8: 
+                Dia = 29;
+                ImprimeDia(Dia);
+                mes.textContent = "Setembro";
+                break;
+            case 9: 
+                Dia = 30;
+                ImprimeDia(Dia);
+                mes.textContent = "Outubro";
+                break;
+            case 10: 
+                Dia = 29;
+                ImprimeDia(Dia);
+                mes.textContent = "Novembro";
+                break;
+            case 11:
+                Dia = 30;
+                ImprimeDia(Dia);
+                mes.textContent = "Dezembro";
+                break;       
+        }
 }   
+                            
+function ImprimeDia (Dia, n_mes){
+    Grid.innerHTML = null;
+    Dia++;
+    Mes++;
+    for (var a = 1; a <= Dia; a++){
+        let id = a+"/"+Mes+"/"+Ano;
+        var criaBotao = `
+        <button class="botao" id="${id}">${a}</button>
+        `;
+        Grid.innerHTML += criaBotao;
+    }; 
+    Mes--;
+}

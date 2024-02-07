@@ -187,7 +187,7 @@ background-color: #fbeb5c;
 
 .slider{
     width: 100%;
-    height: 100%;
+    height: 100%; 
 }
 
 .slides{
@@ -239,4 +239,12 @@ background-color: #fbeb5c;
     position: absolute;
     left: 11%;
     bottom: 50%;
+}
+
+.content{
+    display: block;
+}
+
+.wrapper{
+    display: none;
 }
