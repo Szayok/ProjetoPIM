@@ -233,12 +233,14 @@ background-color: #fbeb5c;
     position: absolute;
     right: 5%;
     bottom: 50%;
+    cursor: pointer;
 }
 
 .leftarrow{
     position: absolute;
     left: 11%;
     bottom: 50%;
+    cursor: pointer;
 }
 
 .content{
@@ -247,4 +249,8 @@ background-color: #fbeb5c;
 
 .wrapper{
     display: none;
+}
+
+#la{
+    cursor: pointer;
 }
