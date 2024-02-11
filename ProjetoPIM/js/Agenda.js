@@ -51,7 +51,7 @@ function TrocaMes (){
             case 0:
                 Dia = 30;
                 ImprimeDia(Dia);
-                mes.textContent = "janeiro";
+                mes.textContent = "Janeiro";
                 break;
             case 1: 
                 if (Ano % 4 != 0) {
